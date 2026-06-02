@@ -20,7 +20,9 @@
     white-space: nowrap;
     width: 100%;
 }
-
+.service-btn {
+    color: #99badd;
+}
 .service-btn:hover {
     background-color: #d7deeb;
 }
@@ -47,7 +49,9 @@
     justify-content: space-between;
     width: 100%;
 }
-
+.service-card-text a{
+    color: #99badd;
+}
 .service-card{gap: 20px;}
 .service-card{
     display: flex;

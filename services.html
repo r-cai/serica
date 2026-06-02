@@ -21,6 +21,9 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top custom-gradient-nav">
     <a class="navbar-brand" href="index.html">ICON</a>
+    <div class="book-button3 btn-primary d-lg-none ms-auto me-2">
+        <a class="nav-item nav-link" href="booking.html" tabindex="-1">BOOK NOW</a>
+    </div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -1297,6 +1300,19 @@
             <p class="arrowp"><i onclick="rightscroll()" class="arrow right"></i></p>
         </div>
 
+    <div class="consultation">
+        <div class="consult-text">
+            <h5><b>not sure where to start?</b></h5>
+            <h3>your skin has a story.
+                VISIA reads it.</h3>
+            <h6><b>Our advanced VISIA Complexion Analysis System photographs and maps your skin across multiple lighting modes — revealing spots, texture, pores, UV damage, and subsurface concerns invisible to the naked eye. <br> Every Serica journey begins here, with clarity.</b></h6>
+                
+            <div class="book-button2" style="align-self: flex-end;white-space: nowrap;">
+                <a class="nav-item nav-link" href="booking.html" tabindex="-1">BOOK NOW</a>
+            </div>
+        </div>
+    </div>
+
     <div class="locations-info">
         <h4>visit us: </h4>
         <div class="location-select  d-flex flex-column flex-sm-row align-items-center">
@@ -1341,19 +1357,6 @@
         </div>
     </div>
     
-    <div class="consultation">
-        <div class="consult-text">
-            <h5><b>not sure where to start?</b></h5>
-            <h3>your skin has a story.
-                VISIA reads it.</h3>
-            <h6><b>Our advanced VISIA Complexion Analysis System photographs and maps your skin across multiple lighting modes — revealing spots, texture, pores, UV damage, and subsurface concerns invisible to the naked eye. <br> Every Serica journey begins here, with clarity.</b></h6>
-                
-            <div class="book-button2" style="align-self: flex-end;white-space: nowrap;">
-                <a class="nav-item nav-link" href="booking.html" tabindex="-1">BOOK NOW</a>
-            </div>
-        </div>
-    </div>
-
     <div class="footer">
         <div class="footer-icon">
             <a class="navbar-brand" href="#">ICON</a>
@@ -1438,9 +1441,9 @@
         document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('.service-btn').classList.add('active');
             document.querySelector('.acne-results').style.display = 'grid';
+            updateLocationDisplay();
         });
         selectService()
-        updateLocationDisplay();
     </script>
 </body>
 </html>

@@ -1,9 +1,9 @@
 body{
-    background-color: #f5f1ec;
+    background-color: #e4e8cd;
     font-family: 'Cormorant Garamond', serif;
 }
 .body-content{
-    padding: 15vh 15%;
+    padding: 5vh 15%;
 }
 .custom-gradient-nav {
   background-image: linear-gradient(to left, 
@@ -45,14 +45,14 @@ body{
 .book-button2{
     padding: 0.1vw 0.4vw;
     border: 2px solid #655b59;
-    background-color: #d7deeb;}
+    background-color: #e4e8cd;}
 .book-button3{
     padding: 0.01vw 0.2vw;
     border: 2px solid #655b59;
     background-color: #fff;}
 .book-button1 .nav-link{
     font-size: 18px !important;
-    color: #d1cdc6 !important;
+    color: #e4e8cd !important;
 }
 .book-button2 .nav-link{
     font-size: 16px !important;
@@ -62,13 +62,13 @@ body{
     font-size: 12px !important;
 }
 .book-button1:hover{
-    background-color: #4a382d;
+    background-color: #251818;
 }
 .book-button2:hover{
-    background-color: #d1cdc6;
+    background-color: #d7deeb;
 }
 .book-button3:hover{
-    background-color: #d7deeb;
+    background-color: #e4e8cd;
 }
 @media (max-width: 991.98px) {
             .navbar-collapse.collapse.show .book-button1,
@@ -135,6 +135,26 @@ body{
     font-weight: bold;}
 .title-row h3{font-size:40px;
     font-weight: 600;}
+
+.experience{
+    background-color: #655b59;
+    padding: 10vh 15%;
+    color: #e4e8cd;
+}
+.reviews-carousel{
+    padding-top: 15vh;
+    padding-left: 15%;padding-right: 15%;
+    width: 100%;
+    height: auto;
+}
+.reviews-track{
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-wrap: nowrap;
+    gap: 15px;
+}
+.review{flex: 1;}
 .carousel{
     height:50vh;
 }
@@ -156,7 +176,7 @@ body{
     flex: 1 1 50%;  
     font-family: 'Cormorant Garamond', serif;
     font-weight: bold;
-    color: #4a382d;
+    color: #251818;
     text-align: center;
     min-width: 50%;
     display: flex;
@@ -196,12 +216,12 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 10% 30%;
-    background-color: #4a382d;
+    background-color: #251818;
 }
 .footer-icon{
     align-self: center;
     font-size: 10px;
-    color: #d1cdc6;
+    color: #e4e8cd;
 }
 .footer-links{
     align-items: left;
@@ -215,11 +235,11 @@ body{
 .footer-link,
 .footer-link:active,
 .footer-link:visited{
-    color: #d5d1cc;
+    color: #e4e8cd;
     text-decoration: none;
 }
 .footer-link:hover{
-    color: #d1cdc6;
+    color: #e4e8cd;
     text-decoration: none;
 }
 .socials{
@@ -227,7 +247,7 @@ body{
     justify-content: center;
     padding: 30px 15%;
     text-align: center;
-    /* background-color: #d5d1cc; */
+    /* background-color: #e4e8cd; */
 }
 .socials h5{
     font-weight: bold;
@@ -243,7 +263,13 @@ body{
     color: #251818;
 }
 .social-icons a:hover{
-    color: #4a382d;
+    color: #251818;
+}
+.deals-card a{
+    color: #99badd;
+}
+.reviews-carousel a{
+    color: #99badd;
 }
 /* .si-instagram { color: #E1306C; }
 .si-wechat    { color: #07C160; }
@@ -278,7 +304,7 @@ body{
     padding: 20px 30px;
     border-radius: 8px;
 }
-.consult-text h3{color:#4a382d}
+.consult-text h3{color:#251818}
 .deals{
 
 }
@@ -343,7 +369,7 @@ body{
     gap: 30px;
     padding: 3vw 6vw;
     margin: 50px 0px !important;
-    border: 3px solid #4a382d;
+    border: 3px solid #251818;
     outline: 3px solid #655b59;
     outline-offset: 7px;
     background-color: #655b59;
@@ -361,8 +387,13 @@ body{
 }
 .locations-info{
     padding: 15vh 15%;
-    text-align: center;
     font-weight: bold;
+}
+.locations-info h4{
+    text-align: center;
+}
+.location-info.loc{
+    text-align: left;
 }
 .location-select{
     display: inline-flex;
@@ -402,22 +433,22 @@ body{
     display: inline-block;
     font-weight:lighter !important;
     padding: 2% 5%;
-    background-color: #d5d1cc;
-    border: 2px solid #4a382d;
+    background-color: #e4e8cd;
+    border: 2px solid #251818;
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
     white-space: nowrap;
 }
 .location-select input[type="radio"] + label:hover {
-    background-color: #d7deeb;
+    background-color: #e4e8cd;
 }
 
 .location-select input[type="radio"]:checked + label:hover {
     background-color: #251818;
 }
 .location-select input[type="radio"]:checked + label {
-    background-color: #4a382d;
+    background-color: #251818;
     border-color: #251818;
     color: white;
 }
@@ -436,7 +467,7 @@ ul li::before{
     top: 50%;
     transform: translateY(-50%);
     width: 15px; height: 15px;
-    background-image: url('beauty-svgrepo-com-d5d1cc.svg');
+    background-image: url('beauty-svgrepo-com-e4e8cd.svg');
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -468,7 +499,10 @@ ul li::before{
 }
 @media (max-width: 992px) {
     .body-content{
-        padding: 15vh 0px;
+        padding: 5vh 0px;
+    }
+    .loc-img{
+        width: 100%;
     }
     .carousel,
     .carousel-inner,
@@ -487,10 +521,26 @@ ul li::before{
     .location-select{margin: 0 auto;}
     .trending, 
     .team,
+    .experience,
+    .reviews-carousel,
     .locations-info{
         padding-left: 10px;
         padding-right: 10px;
     }
+    .reviews-track{
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+    .carousel-track {
+        display: flex;
+        flex-wrap: nowrap; 
+    }
+    .review{
+        flex: 0 0 80%; 
+        scroll-snap-align: center;
+    }
+
     .carousel-capt{
         min-height: 0;
         justify-content: flex-start;
