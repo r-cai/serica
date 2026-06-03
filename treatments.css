@@ -69,6 +69,10 @@
     justify-content: space-between;
     width: 100%;
 }
+.top-up-button{
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
 .service-card-text a{
     color: #99badd;
 }
@@ -83,6 +87,9 @@
     transform: scale(1.05); 
     /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);  */
 }
+.member-credit .service-card{
+    background-color: #d7deeb;
+}
 .service-card > div:last-child {
     margin-top: auto;
 }
@@ -94,8 +101,19 @@
     width: 100%;
     height: 30vh;
 }
+.member-credit .card-bgimg{
+    background-image: url(pexels-hoang-b-u-2062876836-30215485.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 10vh;
+}
 .service-card-text{
     width: 100%;
+}
+.credit-top-up{
+    text-align: center !important;
 }
 .full-row {
     grid-column: 1 / -1; 

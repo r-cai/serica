@@ -495,15 +495,17 @@ ul li::before{
         grid-template-columns: auto auto;
         gap: 5px;
     }
-    .silk-packages.pckge-display{
-        grid-template-columns: repeat(6, 1fr)  !important;
-    }
     .classic.pckge-display,
     .member-credit.pckge-display{
         grid-template-columns: repeat(8, 1fr)  !important;
     }
     .results{
         grid-template-columns: auto auto !important;
+    }
+}
+@media (max-width: 1200px) {
+    .silk-packages.pckge-display{
+        grid-template-columns: repeat(6, 1fr)  !important;
     }
 }
 @media (max-width: 600px) {
@@ -613,7 +615,7 @@ ul li::before{
         align-self: center;
         text-align: left;
         margin: 0 auto;
-        width: fit-content;
+        width: 90%;
     }
     .team-card{
         gap: 20px;
