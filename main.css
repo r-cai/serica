@@ -69,6 +69,12 @@ body{
 }
 .book-button3:hover{
     background-color: #e4e8cd;
+    border-color: #251818;
+}
+.book-button3 a:active{
+    background-color: #e4e8cd;
+    border-radius: 40px;
+    border: none;
 }
 @media (max-width: 991.98px) {
             .navbar-collapse.collapse.show .book-button1,
@@ -284,6 +290,15 @@ body{
     position: relative;
     padding: 5% 15%;
 }
+.service-card-skin-booster-combo{
+    margin-top: -20px;
+    margin-bottom: -20px;
+}
+.booster-combo{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.booster-combo h6{font-weight: bold;}
 .consultation::before{
     content: '';
     position: absolute;
@@ -305,9 +320,6 @@ body{
     border-radius: 8px;
 }
 .consult-text h3{color:#251818}
-.deals{
-
-}
 .trending{
     padding-top: 15vh;
     margin: 0 auto;
@@ -448,7 +460,7 @@ body{
     background-color: #251818;
 }
 .location-select input[type="radio"]:checked + label {
-    background-color: #251818;
+    background-color: #655b59;
     border-color: #251818;
     color: white;
 }
@@ -483,6 +495,13 @@ ul li::before{
         grid-template-columns: auto auto;
         gap: 5px;
     }
+    .silk-packages.pckge-display{
+        grid-template-columns: repeat(6, 1fr)  !important;
+    }
+    .classic.pckge-display,
+    .member-credit.pckge-display{
+        grid-template-columns: repeat(8, 1fr)  !important;
+    }
     .results{
         grid-template-columns: auto auto !important;
     }
@@ -493,8 +512,15 @@ ul li::before{
         grid-template-columns: auto;
         gap: 10px;
     }
+    .silk-packages.pckge-display{
+        grid-template-columns: repeat(3, 1fr)  !important;
+    }
+    .classic.pckge-display,
+    .member-credit.pckge-display{
+        grid-template-columns: repeat(4, 1fr)  !important;
+    }
     .results{
-        grid-template-columns: auto !important;
+        grid-template-columns: auto auto !important;
     }
 }
 @media (max-width: 992px) {
