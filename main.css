@@ -2,6 +2,9 @@ body{
     background-color: #e8e5de;
     font-family: 'Cormorant Garamond', serif;
 }
+html {
+    scroll-behavior: smooth;
+}
 .body-content{
     padding: 5vh 15%;
 }
@@ -29,7 +32,15 @@ body{
     font-weight: bold;
     /* padding: 0vw 0vw; */
 }
-
+.tl-button{
+    margin-left: -1.5vw;
+    padding: 0px 0px;
+}
+.tl-button a{
+    border: 2px solid #4a382d;
+    border-radius: 50%;
+    padding: 0px 0px !important;
+}
 .book-button1,
 .book-button2,
 .book-button3{
@@ -92,7 +103,7 @@ body{
     display: inline-block;
 }
 .title-banner{
-    background-image: url('pexels-annpeach-14095427.jpg');
+    background-image: url('title-banner0.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -140,7 +151,8 @@ body{
 .title-row h1{font-size:48px;
     font-weight: bold;}
 .title-row h3{font-size:40px;
-    font-weight: 600;}
+    /* font-weight: 600; */
+}
 
 .experience{
     background-color: #281822;
@@ -286,6 +298,8 @@ body{
 .locations-info{
     padding: 0px 15%;
 }
+.more-about-service{padding: 15vh 15%;
+padding-top: 0px;}
 .consultation {
     position: relative;
     padding: 5% 15%;
@@ -569,6 +583,7 @@ ul li::before{
     }
 }
 @media (max-width: 992px) {
+    .tl-button.tl-expand{display: none;}
     .body-content{
         padding: 5vh 0px;
     }
