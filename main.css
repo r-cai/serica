@@ -1,5 +1,5 @@
 body{
-    background-color: #d5d1cc;
+    background-color: #e8e5de;
     font-family: 'Cormorant Garamond', serif;
 }
 .body-content{
@@ -65,7 +65,7 @@ body{
     background-color: #281822;
 }
 .book-button2:hover{
-    background-color: #d7deeb;
+    background-color: #e8d9d2;
 }
 .book-button3:hover{
     background-color: #d5d1cc;
@@ -192,9 +192,9 @@ body{
     overflow: hidden;
 }
 .carousel-control-prev-icon,
-.carousel-control-next-icon{filter: brightness(0) saturate(100%) invert(32%) sepia(2%) saturate(2008%) hue-rotate(322deg) brightness(99%) contrast(77%);}
+.carousel-control-next-icon{filter: brightness(0) saturate(100%) invert(9%) sepia(15%) saturate(1470%) hue-rotate(270deg) brightness(93%) contrast(94%);}
 .carousel-indicators li{
-    background-color:#655b59 !important;
+    background-color:#281822 !important;
 }
 .carousel-capt h4{font-size: 2em;}
 .carousel-capt p{font-size: 1em;}
@@ -292,7 +292,6 @@ body{
 }
 .service-card-skin-booster-combo{
     margin-top: -20px;
-    margin-bottom: -20px;
 }
 .booster-combo{
     padding-left: 5px;
@@ -453,7 +452,7 @@ body{
     white-space: nowrap;
 }
 .location-select input[type="radio"] + label:hover {
-    background-color: #d5d1cc;
+    background-color: #e8d9d2;
 }
 
 .location-select input[type="radio"]:checked + label:hover {

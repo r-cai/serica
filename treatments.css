@@ -21,10 +21,10 @@
     width: 100%;
 }
 .service-btn {
-    color: #99badd;
+    color: #281822;
 }
 .service-btn:hover {
-    background-color: #d7deeb;
+    background-color: #e8d9d2;
 }
 
 .service-btn.active {
@@ -40,8 +40,8 @@
   grid-template-columns: repeat(3, 1fr); 
     padding: 0vh 15%;
     padding-top: 15vh;
-    /* display: none; */
-    display: grid;
+    display: none;
+    /* display: grid; */
     gap: 15px;
 }
 .pckge-display{
@@ -64,6 +64,9 @@
 .three-columns {
   grid-column: span 4;
 }
+.signature-facial{
+    background-color: #e8e5de;
+}
 .price-book-component{
     display: inline-flex;
     align-items: baseline;
@@ -75,7 +78,7 @@
     padding-bottom: 30px;
 }
 .service-card-text a{
-    color: #99badd;
+    color: #281822;
 }
 .service-card{gap: 20px;}
 .service-card{
@@ -89,7 +92,7 @@
     /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);  */
 }
 .member-credit .service-card{
-    background-color: #d7deeb;
+    background-color: #e8d9d2;
 }
 .service-card > div:last-child {
     margin-top: auto;
@@ -149,7 +152,7 @@
 .arrowp.right{margin-right: 5px;}
 
 .arrowp:hover {
-    background-color: #d7deeb;
+    background-color: #e8d9d2;
     cursor: pointer;
 }
 .arrow:hover {
