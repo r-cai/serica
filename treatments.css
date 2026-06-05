@@ -29,18 +29,19 @@
 
 .service-btn.active {
     background-color: #4a382d;
-    border-color: #251818;
+    border-color: #281822;
     color: white;
 }
 
 .service-btn.active:hover {
-    background-color: #251818;
+    background-color: #281822;
 }
 .results{
   grid-template-columns: repeat(3, 1fr); 
     padding: 0vh 15%;
     padding-top: 15vh;
-    display: none;
+    /* display: none; */
+    display: grid;
     gap: 15px;
 }
 .pckge-display{
@@ -152,7 +153,7 @@
     cursor: pointer;
 }
 .arrow:hover {
-    border-color: #251818;
+    border-color: #281822;
     cursor: pointer;
 }
 

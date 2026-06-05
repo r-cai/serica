@@ -57,7 +57,7 @@
 
     <div class="page-title">
         <h1 style="color: #4a382d;"><b>PACKAGES</b></h1>
-        <h4 style="color: #655b59;"><b>Every package begins and ends with a complimentary VISIA skin analysis. Choose a single starter session or commit to a full course — both are designed around measurable pckge-display.</b></h4>
+        <h4 style="color: #655b59;"><b>Every package begins and ends with a complimentary VISIA skin analysis. Choose a single starter session or commit to a full course — both are designed around measurable results.</b></h4>
     </div>
     
     <div class="services-all">
@@ -548,9 +548,10 @@
             const el = document.getElementById('jump-to-pckge-display');
             const offset = 0;
             const top = el.getBoundingClientRect().top + window.scrollY - offset;
-            setTimeout(() => {
-                window.scrollTo({ top, behavior: 'smooth' });
-            }, 400);
+            window.scrollTo({ top, behavior: 'smooth' });
+            // setTimeout(() => {
+            //     window.scrollTo({ top, behavior: 'smooth' });
+            // }, 400);
         }
         document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('.service-btn').classList.add('active');
