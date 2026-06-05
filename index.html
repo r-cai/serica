@@ -78,6 +78,18 @@
             <p>clients served</p>
         </div>
     </div>
+    
+    <div id="overlay" class="overlay-container">
+        <div class="overlay-box" style="display:flex; flex-direction: column; justify-content:center; align-items:center;background:#f5f5f3;">
+        <button id="closeOverlay" class="close-btn">&times;</button>
+        <iframe
+            src="https://booking.mangomint.com/281941"
+            style="width:450px; max-width:100%; min-height:80vh; border:none; border-radius:16px; box-shadow:0 2px 24px rgba(0,0,0,0.10); background:#fff;"
+            scrolling="yes"
+            title="Book an appointment"
+        ></iframe>
+        </div>
+    </div>
 
     <div class="body-content">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="false" data-interval="false">
@@ -128,7 +140,7 @@
             <h6><b>Our advanced VISIA Complexion Analysis System photographs and maps your skin across multiple lighting modes — revealing spots, texture, pores, UV damage, and subsurface concerns invisible to the naked eye. <br> Every Serica journey begins here, with clarity.</b></h6>
                 
             <div class="book-button2" style="align-self: flex-end;white-space: nowrap;">
-                <a class="nav-item nav-link" href="https://booking.mangomint.com/281941" tabindex="-1">BOOK NOW</a>
+                <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
             </div>
         </div>
     </div>
@@ -155,7 +167,7 @@
                         <h3>$1,500</h3>
                         <p id="per-session" style="white-space: nowrap;margin-left: 5px;">per session</p>
                         <div class="book-button2" style="align-self: flex-end;white-space: nowrap;margin-left: 5vw;">
-                            <a class="nav-item nav-link" href="https://booking.mangomint.com/281941" tabindex="-1">BOOK NOW</a>
+                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
                         </div>
                     </div>
                 </div>
@@ -180,7 +192,7 @@
                     <div style="display: inline-flex;align-items: baseline;justify-content: space-between;width: 100%;">
                         <h5><s>$680</s> > $480</h5>
                         <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
-                            <a class="nav-item nav-link" href="https://booking.mangomint.com/281941" tabindex="-1">BOOK NOW</a>
+                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
                         </div>
                     </div>
             </div>
@@ -193,7 +205,7 @@
                     <div style="display: inline-flex;align-items: baseline;justify-content: space-between;width: 100%;">
                         <h5><s>$2,266</s> > $988</h5>
                         <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
-                            <a class="nav-item nav-link" href="https://booking.mangomint.com/281941" tabindex="-1">BOOK NOW</a>
+                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
                         </div>
                     </div>
             </div>
@@ -202,12 +214,12 @@
                 <div class="deals-card-text">
                     <h4><b>Skin Booster <br> Triple Combo</b></h4>
                     <p>Face · Eye · Neck</p>
-                    <p><b>Three targeted skin booster treatments in a single visit — hydrating and restoring the face, eye area, and neck simultaneously for full-panel rejuvenation. </b><a href="#">Learn more -></a></p>
+                    <p><b>Three targeted skin booster treatments in a single visit — hydrating and restoring the face, eye area, and neck simultaneously for full-panel rejuvenation. </b><a href="packages/index.html#skin-booster-combo">Learn more -></a></p>
                 </div>
                     <div style="display: inline-flex;align-items: baseline;justify-content: space-between;width: 100%; justify-content: space-between;width: 100%;">
                         <h5><s>$1,500</s> > $799</h5>
                         <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
-                            <a class="nav-item nav-link" href="https://booking.mangomint.com/281941" tabindex="-1">BOOK NOW</a>
+                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
                         </div>
                     </div>
             </div>
@@ -221,7 +233,7 @@
                     <div style="display: inline-flex;align-items: baseline;justify-content: space-between;width: 100%;align-self: flex-end;">
                         <h5>$3,249</h5>
                         <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
-                            <a class="nav-item nav-link" href="https://booking.mangomint.com/281941" tabindex="-1">BOOK NOW</a>
+                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
                         </div>
                     </div>
             </div>
@@ -347,7 +359,36 @@
     
     <script>
         const ktownRadio = document.getElementById('flexRadioDefault1');
-        const flushingRadio = document.getElementById('flexRadioDefault2');
+        const flushingRadio = document.getElementById
+        ('flexRadioDefault2');
+        
+        const openBooking = document.querySelectorAll('.booking-overlay')
+        const closeBtn = document.getElementById('closeOverlay')
+        const overlay = document.getElementById('overlay')
+        openBooking.forEach(link =>{
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        closeBtn.addEventListener('click', () => {
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+        overlay.addEventListener('click', (e) => {
+            if(e.target == overlay) {
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && overlay.classList.contains('active')) {
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
         const ktownDiv = document.querySelector('.ktown');
         const flushingDiv = document.querySelector('.flushing');
         

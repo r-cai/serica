@@ -272,10 +272,10 @@ body{
     color: #281822;
 }
 .deals-card a{
-    color: #99badd;
+    color: #281822;
 }
 .reviews-carousel a{
-    color: #99badd;
+    color: #281822;
 }
 /* .si-instagram { color: #E1306C; }
 .si-wechat    { color: #07C160; }
@@ -383,7 +383,7 @@ body{
     border: 3px solid #281822;
     outline: 3px solid #4a382d;
     outline-offset: 7px;
-    background-color: #4a382d;
+    background-color: #4a382dc0;
     flex-direction: row;
 }
 .team-text{
@@ -485,6 +485,50 @@ ul li::before{
 #team-text-list li::before{
     background-image: url('beauty-svgrepo-com.svg');
 }
+
+.overlay-container{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+.overlay-box{
+    position: relative;
+    background: #fff;
+    width: 80%;
+    max-width: 700px;
+    padding: 20px;
+    border-radius: 8px;
+}
+.close-btn {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  color: #281822;
+  background: white;
+  border: none;
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+.close-btn:focus,
+.close-btn:active{border: none;}
+.overlay-container.active {
+  display: flex;
+}
+
 @media (max-width: 590px) {
     hr{display: none;}
 }

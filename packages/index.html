@@ -60,6 +60,18 @@
         <h4 style="color: #655b59;"><b>Every package begins and ends with a complimentary VISIA skin analysis. Choose a single starter session or commit to a full course — both are designed around measurable results.</b></h4>
     </div>
     
+    <div id="overlay" class="overlay-container">
+        <div class="overlay-box" style="display:flex; flex-direction: column; justify-content:center; align-items:center;background:#f5f5f3;">
+        <button id="closeOverlay" class="close-btn">&times;</button>
+        <iframe
+            src="https://booking.mangomint.com/281941"
+            style="width:450px; max-width:100%; min-height:80vh; border:none; border-radius:16px; box-shadow:0 2px 24px rgba(0,0,0,0.10); background:#fff;"
+            scrolling="yes"
+            title="Book an appointment"
+        ></iframe>
+        </div>
+    </div>
+
     <div class="services-all">
        <div class="services-menu">
             <button class="service-btn active" onclick="selectService(this);clickMenu(this)">All Packages</button>
@@ -100,7 +112,7 @@
                     <div class="price-book-component">
                         <h5>$729/session</h5>
                         <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
-                            <a class="nav-item nav-link" href="https://booking.mangomint.com/281941" tabindex="-1">BOOK NOW</a>
+                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)"  tabindex="-1">BOOK NOW</a>
                         </div>
                     </div>
                     <p>$1,949 Full Course · 5 Sessions</p>
@@ -121,7 +133,7 @@
                     <div class="price-book-component">
                         <h5>$1,179/session</h5>
                         <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
-                            <a class="nav-item nav-link" href="https://booking.mangomint.com/281941" tabindex="-1">BOOK NOW</a>
+                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)"  tabindex="-1">BOOK NOW</a>
                         </div>
                     </div>
                     <p>$4,749 Full Course · 4 Sessions</p>
@@ -143,7 +155,7 @@
                     <div class="price-book-component">
                         <h5>$1,899/session</h5>
                         <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
-                            <a class="nav-item nav-link" href="https://booking.mangomint.com/281941" tabindex="-1">BOOK NOW</a>
+                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)"  tabindex="-1">BOOK NOW</a>
                         </div>
                     </div>
                     <p>$7,799 Full Course · 5 Sessions</p>
@@ -164,7 +176,7 @@
                     <div class="price-book-component">
                         <h5>$2,449/session</h5>
                         <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
-                            <a class="nav-item nav-link" href="https://booking.mangomint.com/281941" tabindex="-1">BOOK NOW</a>
+                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)"  tabindex="-1">BOOK NOW</a>
                         </div>
                     </div>
                     <p>$7,399 Full Course · 3 Sessions</p>
@@ -179,20 +191,20 @@
                         <li><p>VISIA Skin Analysis (complimentary)</p></li>
                         <li><p>Ultherapy Full Face + Eyes + Neck 1200 Shots</p></li>
                         <li><p>NAD+ 500mg IV Infusion</p></li>
-                        <li><p>Ox Bone Face & Scalp Massage</p></li>
+                        <li><p>Ox Bone Face & Scalp Aromatherapy Sessions</p></li>
                         <li><p>Follow-up VISIA (complimentary)</p></li>
                     </ul>
                 </div>
                     <div class="price-book-component">
                         <h5>$3,249/session</h5>
                         <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
-                            <a class="nav-item nav-link" href="https://booking.mangomint.com/281941" tabindex="-1">BOOK NOW</a>
+                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)"  tabindex="-1">BOOK NOW</a>
                         </div>
                     </div>
                     <p>$12,649 Full Course · 3 Sessions</p>
             </div>
         </div>
-        <div class="skin-booster pckge-display">
+        <div class="skin-booster pckge-display" id="skin-booster-combo">
             <div class="full-row" style="display: inline-flex;width:fit-content; gap: 10px;margin-bottom: 15px;">
                 <hr style="width: 10vw;border: none; border-top: 2px solid #655b59;">
                 <img src="../beauty-svgrepo-com.svg" width="20px" height="20px">
@@ -222,7 +234,7 @@
                     <div style="display: inline-flex;align-items: baseline;justify-content: space-between;width: 100%; justify-content: space-between;width: 100%;">
                         <h5><s>$1,500</s> > $799</h5>
                         <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
-                            <a class="nav-item nav-link" href="booking/index.html" tabindex="-1">BOOK NOW</a>
+                            <a class="nav-item nav-link booking-overlay" href="javascript.void(0)" tabindex="-1">BOOK NOW</a>
                         </div>
                     </div>
                     <p>$2,800 Full Course · 4 Sessions</p>
@@ -234,7 +246,7 @@
                 <img src="../beauty-svgrepo-com.svg" width="20px" height="20px">
                 <h4><b>classic packages</b></h4>
             </div>
-            <div class="full-row">Our long-standing wellness and seasonal packages — combining massage, facial, and body therapies into exceptional value bundles.</div>
+            <div class="full-row">Our long-standing wellness and seasonal packages — combining aroma, facial, and body therapies into exceptional value bundles.</div>
             <div class="service-card d-flex flex-column flex-lg-column align-items-center three-columns">
                 <div class="service-card-bgimg"></div>
                 <div class="service-card-text">
@@ -242,7 +254,7 @@
                     <h4><b>Aromatherapy & Infrared Package</b></h4>
                     <p><i>A pure sensory experience — warm aromatic oils, heated stones, and infrared therapy working together to melt tension and restore calm. Ideal for general relaxation and unwinding.</i></p>
                     <ul id="team-text-list" style="margin-top: 10px;font-weight: bold;">
-                        <li><p>10 Whole Body Massage Sessions</p></li>
+                        <li><p>10 Whole Body Aromatherapy Sessions</p></li>
                         <li><p>Heated Stone Therapy</p></li>
                         <li><p>Infrared Phototherapy</p></li>
                     </ul>
@@ -250,7 +262,7 @@
                     <div class="price-book-component">
                         <h5><s>$680</s> > $480</h5>
                         <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
-                            <a class="nav-item nav-link" href="https://booking.mangomint.com/281941" tabindex="-1">BOOK NOW</a>
+                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)"  tabindex="-1">BOOK NOW</a>
                         </div>
                     </div>
             </div>
@@ -259,9 +271,9 @@
                 <div class="service-card-text">
                     <p style="border:1px solid #655b59;padding: 1px 6px;font-size: 10px;margin-left: 10px;width: fit-content;"><b>Meridian</b></p>
                     <h4><b>Meridian Body Therapy Package</b></h4>
-                    <p><i>The same aromatic oils and heated stones, but the massage follows Traditional Chinese Medicine pressure-point pathways. More targeted than the Aromatherapy package — better for chronic tension, fatigue, or clients who want a therapeutic result alongside the relaxation.</i></p>
+                    <p><i>The same aromatic oils and heated stones, but the treatment follows Traditional Chinese Medicine pressure-point pathways. More targeted than the Aromatherapy package — better for chronic tension, fatigue, or clients who want a therapeutic result alongside the relaxation.</i></p>
                     <ul id="team-text-list" style="margin-top: 10px;font-weight: bold;">
-                        <li><p>10 Whole Body Massage Sessions</p></li>
+                        <li><p>10 Whole Body Aromatherapy Sessions</p></li>
                         <li><p>Heated Stone Therapy</p></li>
                         <li><p>Infrared Phototherapy</p></li>
                     </ul>
@@ -269,7 +281,7 @@
                     <div class="price-book-component">
                         <h5><s>$680</s> > $480</h5>
                         <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
-                            <a class="nav-item nav-link" href="https://booking.mangomint.com/281941" tabindex="-1">BOOK NOW</a>
+                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)"  tabindex="-1">BOOK NOW</a>
                         </div>
                     </div>
             </div>
@@ -286,7 +298,7 @@
                     <div class="price-book-component">
                         <h5><s>$1,360</s> > $680</h5>
                         <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
-                            <a class="nav-item nav-link" href="https://booking.mangomint.com/281941" tabindex="-1">BOOK NOW</a>
+                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)"  tabindex="-1">BOOK NOW</a>
                         </div>
                     </div>
             </div>
@@ -299,13 +311,13 @@
                     <ul id="team-text-list" style="margin-top: 10px;font-weight: bold;">
                         <li><p>3 Signature Facials</p></li>
                         <li><p>3 Premium Facial Care Sessions</p></li>
-                        <li><p>1 Complimentary Full-Body Aromatic Oil Massage</p></li>
+                        <li><p>1 Complimentary Full-Body Aromatic Oil Aromatherapy Sessions</p></li>
                     </ul>
                 </div>
                     <div class="price-book-component">
                         <h5><s>$1,556</s> > $788</h5>
                         <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
-                            <a class="nav-item nav-link" href="https://booking.mangomint.com/281941" tabindex="-1">BOOK NOW</a>
+                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)"  tabindex="-1">BOOK NOW</a>
                         </div>
                     </div>
             </div>
@@ -317,13 +329,13 @@
                     <p><i></i></p>
                     <ul id="team-text-list" style="margin-top: 10px;font-weight: bold;">
                         <li><p>6 Hydrafacials</p></li>
-                        <li><p>1 Complimentary Full-Body Aromatic Oil Massage</p></li>
+                        <li><p>1 Complimentary Full-Body Aromatic Oil Aromatherapy Sessions</p></li>
                     </ul>
                 </div>
                     <div class="price-book-component">
                         <h5><s>$2,266</s> > $988</h5>
                         <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
-                            <a class="nav-item nav-link" href="https://booking.mangomint.com/281941" tabindex="-1">BOOK NOW</a>
+                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)"  tabindex="-1">BOOK NOW</a>
                         </div>
                     </div>
             </div>
@@ -343,7 +355,7 @@
                     <div class="price-book-component">
                         <h5><s>$6,800</s> > $2,988</h5>
                         <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
-                            <a class="nav-item nav-link" href="https://booking.mangomint.com/281941" tabindex="-1">BOOK NOW</a>
+                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)"  tabindex="-1">BOOK NOW</a>
                         </div>
                     </div>
             </div>
@@ -424,7 +436,7 @@
             <h6><b>Our advanced VISIA Complexion Analysis System photographs and maps your skin across multiple lighting modes — revealing spots, texture, pores, UV damage, and subsurface concerns invisible to the naked eye. <br> Every Serica journey begins here, with clarity.</b></h6>
                 
             <div class="book-button2" style="align-self: flex-end;white-space: nowrap;">
-                <a class="nav-item nav-link" href="https://booking.mangomint.com/281941" tabindex="-1">BOOK NOW</a>
+                <a class="nav-item nav-link booking-overlay" href="javascript:void(0)"  tabindex="-1">BOOK NOW</a>
             </div>
         </div>
     </div>
@@ -490,6 +502,32 @@
         const flushingRadio = document.getElementById('flexRadioDefault2');
         const ktownDiv = document.querySelector('.ktown');
         const flushingDiv = document.querySelector('.flushing');
+        const openBooking = document.querySelectorAll('.booking-overlay')
+        const closeBtn = document.getElementById('closeOverlay')
+        const overlay = document.getElementById('overlay')
+        openBooking.forEach(link =>{
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        closeBtn.addEventListener('click', () => {
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+        overlay.addEventListener('click', (e) => {
+            if(e.target == overlay) {
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && overlay.classList.contains('active')) {
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
         const menuMap = {
             'All Packages': '.all-packages',
             'Silk Packages': '.silk-packages',
