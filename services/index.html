@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons-font@v13/font/simple-icons.min.css">
     <script>window.Mangomint = window.Mangomint || {}; window.Mangomint.CompanyId = 281941;</script><script src="https://booking.mangomint.com/app.js" async></script>
+    <script src="../hoverServiceDropdown.js" defer></script>
 
     <link rel="stylesheet" href="../main.css">
     <link rel="stylesheet" href="../treatments.css">
@@ -19,34 +20,70 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top custom-gradient-nav">
-    <a class="navbar-brand" href="../index.html">ICON</a>
-    <div class="book-button3 btn-primary d-lg-none ms-auto me-2">
-        <a class="nav-item nav-link" href="../booking/index.html" tabindex="-1">BOOK NOW</a>
-    </div>
-        <div class="tl-button d-lg-none">
-            <a class="nav-item nav-link" href="../zh/index.html" tabindex="-1"><img style="height: 30px;width: 30px;" src="../Circle_Flag_of_the_People's_Republic_of_China.png" alt="circle icon chinese"></a>
-        </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav ml-auto">
-        <a class="nav-item nav-link" href="../index.html">HOME <span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" href="../services/index.html">SERVICES</a>
-        <a class="nav-item nav-link" href="../packages/index.html">PACKAGES</a>
-        <a class="nav-item nav-link" href="../gallery/index.html">GALLERY</a>
-        <a class="nav-item nav-link" href="../about/index.html">ABOUT US</a>
-        <div class="book-button1">
+    
+    <div class="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light custom-gradient-nav">
+        <a class="navbar-brand" href="../index.html">ICON</a>
+        <div class="book-button3 d-lg-none" style="align-self: flex-end;white-space: nowrap;">
             <a class="nav-item nav-link" href="../booking/index.html" tabindex="-1">BOOK NOW</a>
         </div>
-        <div class="tl-button tl-expand">
-            <a class="nav-item nav-link" href="../zh/index.html" tabindex="-1"><img style="height: 30px;width: 30px;" src="../Circle_Flag_of_the_People's_Republic_of_China.png" alt="circle icon chinese"></a>
-        </div>
+            <div class="tl-button d-lg-none">
+                <a class="nav-item nav-link" href="../zh/index.html" tabindex="-1"><img style="height: 30px;width: 30px;" src="../Circle_Flag_of_the_People's_Republic_of_China.png" alt="circle icon chinese"></a>
+            </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link active" href="../index.html">HOME <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="../services/index.html"
+                id="navbar-services">SERVICES</a>
+            <a class="nav-item nav-link" href="../packages/index.html">PACKAGES</a>
+            <a class="nav-item nav-link" href="../gallery/index.html">GALLERY</a>
+            <a class="nav-item nav-link" href="../about/index.html">ABOUT US</a>
+            <div class="book-button1">
+                <a class="nav-item nav-link" href="../booking/index.html" tabindex="-1">BOOK NOW</a>
+            </div>
+            <div class="tl-button tl-expand">
+                <a class="nav-item nav-link" href="../zh/index.html" tabindex="-1"><img style="height: 30px;width: 30px;" src="../Circle_Flag_of_the_People's_Republic_of_China.png" alt="circle icon chinese"></a>
+            </div>
 
+            </div>
+        </div>
+        </nav>
+        <div class="dropdown navbar-drop" id="service-dropdown-menu">
+            <div id="services-bridge"></div>
+            <div id="services-dropdown" class="custom-gradient-nav d-flex flex-column flex-lg-row ">
+                <a class="nav-item nav-link services-main-dropdown" href="index.html">SERVICES</a>
+                <div>
+                    <a class="nav-item nav-link" href="index.html?servicetype=facials">Facials</a>
+                    <a class="nav-item nav-link sub-nav-link" href="index.html?servicetype=facials&subsec=facial-sub-dh">Deep Hydration</a>
+                    <a class="nav-item nav-link sub-nav-link" href="index.html?servicetype=facials&subsec=facial-sub-oac">Oil & Acne Control</a>
+                    <a class="nav-item nav-link sub-nav-link" href="index.html?servicetype=facials&subsec=facial-sub-aa">Anti-aging</a>
+                    <a class="nav-item nav-link sub-nav-link" href="index.html?servicetype=facials&subsec=facial-sub-ssr">Sensitive Skin & Restoration</a>
+                </div>
+                <div>
+                    <a class="nav-item nav-link sub-nav-link" href="index.html?servicetype=texture-rejuv&subsec=texture-sub-l">Laser Treatment</a>
+                </div>
+                <div>
+                    <a class="nav-item nav-link" href="index.html?servicetype=inj-iv">Injections & IV</a>
+                    <a class="nav-item nav-link sub-nav-link" href="index.html?servicetype=inj-iv&subsec=inj-sub-in">Injections</a>
+                    <a class="nav-item nav-link sub-nav-link" href="index.html?servicetype=inj-iv&subsec=inj-sub-iv">IV</a>
+                </div>
+                <div>
+                    <a class="nav-item nav-link" href="index.html?servicetype=well-relax">Wellness & Relaxation</a>
+                    <a class="nav-item nav-link sub-nav-link" href="index.html?servicetype=well-relax&subsec=well-sub-at">Aromatherapy</a>
+                    <a class="nav-item nav-link sub-nav-link" href="index.html?servicetype=well-relax&subsec=well-sub-ht">Head Therapy</a>
+                </div>
+                <div>
+                    <a class="nav-item nav-link" href="index.html?servicetype=hair">Hair Growth & Removal</a>
+                    <a class="nav-item nav-link sub-nav-link" href="index.html?servicetype=hair&subsec=hair-sub-hg">Hair Growth</a>
+                    <a class="nav-item nav-link sub-nav-link" href="index.html?servicetype=hair&subsec=hair-sub-hr">Hair Removal</a>
+                </div>
+            </div>
+            
         </div>
     </div>
-    </nav>
 
     <div class="title-banner" style="height: 40vh !important;">
         <div class="title-bannergraphics">
@@ -80,29 +117,161 @@
     
     <div class="services-all">
        <div class="services-menu">
-            <button class="service-btn active" onclick="selectService(this);clickMenu(this)">Facials & Skin Care</button>
-            <button class="service-btn" onclick="selectService(this);clickMenu(this)">Laser Hair Removal</button>
-            <button class="service-btn active" onclick="selectService(this);clickMenu(this)">Acne & Breakouts</button>
-            <button class="service-btn" onclick="selectService(this);clickMenu(this)">Pigmentation & Dark Spots</button>
-            <button class="service-btn" onclick="selectService(this);clickMenu(this)">Fine Lines & Wrinkles</button>
-            <button class="service-btn" onclick="selectService(this);clickMenu(this)">Sagging & Lifting</button>
-            <button class="service-btn" onclick="selectService(this);clickMenu(this)">Enlarged Pores</button>
-            <button class="service-btn" onclick="selectService(this);clickMenu(this)">Redness & Sensitivity</button>
-            <button class="service-btn" onclick="selectService(this);clickMenu(this)">Hair Loss & Thinning</button>
-            <button class="service-btn" onclick="selectService(this);clickMenu(this)">Scarring & Texture</button>
-            <button class="service-btn" onclick="selectService(this);clickMenu(this)">Body Sculpting</button>
-            <button class="service-btn" onclick="selectService(this);clickMenu(this)">Relaxation & Wellness</button>
-            <button class="service-btn" onclick="selectService(this);clickMenu(this)">Skin Boosters</button>
+            <div class="facials-dropdown dropdown">
+                <button class="service-btn active" 
+                id="facials"
+                onclick="selectClickMenu(this)">Facials
+                </button>
+                <div class=" flex-column flex-lg-row align-items-center service-subcategory"
+                id="facials-subcategory">
+                    <button 
+                    onclick="selectClickMenu(document.getElementById('facials'),'facial-sub-dh')">
+                        <b>Deep Hydration</b>
+                    </button>
+                    <button 
+                    onclick="selectClickMenu(document.getElementById('facials'),'facial-sub-oac')"
+                    class="subcategory-btn">
+                        <b>Oil & Acne Control</b>
+                    </button>
+                    <button 
+                    onclick="selectClickMenu(document.getElementById('facials'),'facial-sub-aa')"
+                    class="subcategory-btn">
+                        <b>Anti-aging</b>
+                    </button>
+                    <button 
+                    onclick="selectClickMenu(document.getElementById('facials'),'facial-sub-ssr')"
+                    class="subcategory-btn">
+                        <b>Sensitive Skin & Restoration</b>
+                    </button>
+                </div>
+            </div>
+
+            <button class="service-btn" 
+            id="lift-tight"
+            onclick="selectClickMenu(this)">Lifting & Tightening
+            </button>
+
+            <div class="texture-dropdown dropdown">
+                <button class="service-btn" 
+                id="texture-rejuv"
+                onclick="selectClickMenu(this)">Skin Texture & Rejuvenation
+                </button>
+                <div class=" flex-column flex-lg-row align-items-center service-subcategory"
+                id="texture-subcategory">
+                    <button 
+                    onclick="selectClickMenu(document.getElementById('texture-rejuv'),'texture-sub-sb')">
+                        <b>Skin Boosters</b>
+                    </button>
+                    <button 
+                    onclick="selectClickMenu(document.getElementById('texture-rejuv'),'texture-sub-mn')"
+                    class="subcategory-btn">
+                        <b>Microneedling</b>
+                    </button>
+                    <button 
+                    onclick="selectClickMenu(document.getElementById('texture-rejuv'),'texture-sub-l')"
+                    class="subcategory-btn">
+                        <b>Laser</b>
+                    </button>
+                </div>
+            </div>
+
+            <button class="service-btn" 
+            id="pigment-dark"
+            onclick="selectClickMenu(this)">Pigmentation & Dark Spots
+            </button>
+
+            <button class="service-btn" 
+            id="ros-acne-scar"
+            onclick="selectClickMenu(this)">Rosacea & Acne & Scars
+            </button>
+
+            <div class="inj-dropdown dropdown">
+                <button class="service-btn" 
+                id="inj-iv"
+                onclick="selectClickMenu(this)">Injections & IV
+                </button>
+                <div class=" flex-column flex-lg-row align-items-center service-subcategory"
+                id="inj-subcategory">
+                    <button 
+                    onclick="selectClickMenu(document.getElementById('inj-iv'),'inj-sub-in')">
+                        <b>Injections</b>
+                    </button>
+                    <button 
+                    onclick="selectClickMenu(document.getElementById('inj-iv'),'inj-sub-iv')"
+                    class="subcategory-btn">
+                        <b>IV</b>
+                    </button>
+                </div>
+            </div>
+
+            <div class="well-dropdown dropdown">
+                <button class="service-btn" 
+                id="well-relax"
+                onclick="selectClickMenu(this)">Wellness & Relaxation
+                </button>
+                <div class=" flex-column flex-lg-row align-items-center service-subcategory"
+                id="well-subcategory">
+                    <button 
+                    onclick="selectClickMenu(document.getElementById('well-relax'),'well-sub-at')">
+                        <b>Aromatherapy</b>
+                    </button>
+                    <button 
+                    onclick="selectClickMenu(document.getElementById('well-relax'),'well-sub-ht')"
+                    class="subcategory-btn">
+                        <b>Head Therapy</b>
+                    </button>
+                </div>
+            </div>
+
+            <div class="weight-dropdown dropdown">
+                <button class="service-btn" 
+                id="weight-body"
+                onclick="selectClickMenu(this)">Weight Loss & Body Contouring
+                </button>
+                <div class=" flex-column flex-lg-row align-items-center service-subcategory"
+                id="weight-subcategory">
+                    <button 
+                    onclick="selectClickMenu(document.getElementById('weight-body'),'weight-sub-wl')">
+                        <b>Weight Loss</b>
+                    </button>
+                    <button 
+                    onclick="selectClickMenu(document.getElementById('weight-body'),'weight-sub-bc')"
+                    class="subcategory-btn">
+                        <b>Body Contouring</b>
+                    </button>
+                </div>
+            </div>
+
+            <div class="hair-dropdown dropdown">
+                <button class="service-btn" 
+                id="hair"
+                onclick="selectClickMenu(this)">Hair Solutions & Removal
+                </button>
+                <div class=" flex-column flex-lg-row align-items-center service-subcategory"
+                id="hair-subcategory">
+                    <button 
+                    onclick="selectClickMenu(document.getElementById('hair'),'hair-sub-hg')"
+                    class="subcategory-btn">
+                        <b>Hair Growth</b>
+                    </button>
+                    <button 
+                    onclick="selectClickMenu(document.getElementById('hair'),'hair-sub-hr')">
+                        <b>Hair Removal</b>
+                    </button>
+                </div>
+            </div>
+
         </div>
-        <!-- <div id="vw-debug" style="position:fixed;top:80px;left:0;background:red;color:white;z-index:9999;font-size:14px;padding:4px;"></div>
         <script>document.getElementById('vw-debug').textContent = window.innerWidth + 'px';</script> -->
         <div id="jump-to-results"></div>
-        <div class="skincare-results results">
-            <div class="full-row" style="display: inline-flex;width:fit-content; gap: 10px;margin-bottom: 15px;">
-                <hr style="width: 10vw;border: none; border-top: 2px solid #655b59;">
+        <div class="facial-results results">
+            <div class="full-row" style="display: inline-flex;width:fit-content; gap: 10px;margin-bottom: 15px;width: 100%;;">
+                <hr style="width: 100%;border: none; border-top: 2px solid #655b59;">
                 <img src="../beauty-svgrepo-com.svg" width="20px" height="20px">
-                <h4><b>facials & skincare</b></h4>
+                <h3 style="white-space: nowrap;"><b>facials</b></h3>
+                <hr style="width: 100%;border: none; border-top: 2px solid #655b59;">
             </div>
+
             <div class="full-row">Clinical-grade facial treatments from the world's leading professional skincare brands — each formulated for a specific skin concern and designed to complement your device treatments.</div>
             <div class="service-card d-flex flex-column flex-lg-column align-items-center full-row">
                 <div class="service-card-bgimg"></div>
@@ -110,31 +279,26 @@
                     <h4><b>Signature Facial</b></h4>
                     <p><b>Our customized facial treatment is designed to deeply cleanse, refresh, and restore your skin while providing a relaxing, results-driven experience. </b><a href="signature-facial.html">Learn more -></a></p>
                 </div>
-                <!-- <div class="booster-combo signature-facial">
-                        <h6>Cleansing</h6>
-                        <p>We begin with a thorough cleanse to remove makeup, dirt, and excess oil, leaving your skin fresh and prepped for treatment Exfoliation - A gentle exfoliation is performed to remove dead skin cells and smooth the skin's surface, helping to improve texture and clarity Targeted Extractions - Using precise techniques, we carefully clear blackheads and acne to deeply cleanse pores and reduce congestion.</p>
-                    </div>  
-                <div class="service-card-skin-booster-combo d-flex flex-column flex-sm-row align-items-center signature-facial">
-                
-                    <div class="booster-combo">
-                        <h6>High-Frequency Therapy</h6>
-                        <p>A high-frequency device is applied to help kill acne-causing bacteria, reduce inflammation, and promote healing.</p>
-                    </div>
-                    <div class="booster-combo">
-                        <h6>Facial Aromatherapy Session</h6>
-                        <p>A relaxing aromatherapy session helps boost circulation, relieve tension, and enhance your skin's natural glow.</p>
-                    </div>
-                    <div class="booster-combo">
-                        <h6>Mask</h6>
-                        <p>A customized mask is applied to address your skin's specific needs, whether that's hydration, calming, or clarifying.</p>
-                    </div>
-                    <div class="booster-combo">
-                        <h6>Finishing Care</h6>
-                        <p>We complete the treatment with a nourishing cream and sunscreen to hydrate, protect, and lock in all the benefits.</p>
-                    </div>
-                </div> -->
                     <div class="price-book-component">
                         <h5>from $118</h5>
+                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
+                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
+                        </div>
+                    </div>
+            </div>
+            <div class="full-row" style="display: inline-flex;width:fit-content; gap: 10px;margin-bottom: 15px;" id="facial-sub-dh">
+                <hr style="width: 10vw;border: none; border-top: 2px solid #655b59;">
+                <img src="../beauty-svgrepo-com.svg" width="20px" height="20px">
+                <h4><b>deep hydration</b></h4>
+            </div>
+            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
+                <div class="service-card-bgimg"></div>
+                <div class="service-card-text">
+                    <h4><b>SkinCeuticals B5 Facial</b></h4>
+                    <p><b>Vitamin B5 and hyaluronic acid dual-action deep hydration facial — restoring moisture balance, softening fine lines, and leaving skin visibly plump. </b><a href="#">Learn more -></a></p>
+                </div>
+                    <div class="price-book-component">
+                        <h5>from $188</h5>
                         <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
                             <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
                         </div>
@@ -143,8 +307,40 @@
             <div class="service-card d-flex flex-column flex-lg-column align-items-center">
                 <div class="service-card-bgimg"></div>
                 <div class="service-card-text">
-                    <h4><b>Broda Pro BHA Peel</b></h4>
-                    <p><b>Medical-grade supramolecular salicylic acid peel penetrating the sebaceous glands to clear congestion, control oil, treat acne, and repair the skin barrier. </b><a href="#">Learn more -></a></p>
+                    <h4><b>Guinot Hydraderm</b></h4>
+                    <p><b>Combined hydration and lifting treatment — moisturising and locking water while tightening and lifting, comprehensively addressing dryness and sagging. </b><a href="#">Learn more -></a></p>
+                </div>
+                    <div class="price-book-component">
+                        <h5>from $198</h5>
+                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
+                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
+                        </div>
+                    </div>
+            </div>
+            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
+                <div class="service-card-bgimg"></div>
+                <div class="service-card-text">
+                    <h4><b>GM Collin Collagen 90</b></h4>
+                    <p><b>The world's first collagen mask treatment — biocompatible collagen replenishing aged, dry, and post-procedure skin with intensive nutrition and structural repair. </b><a href="#">Learn more -></a></p>
+                </div>
+                    <div class="price-book-component">
+                        <h5>from $158</h5>
+                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
+                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
+                        </div>
+                    </div>
+            </div>
+            
+            <div class="full-row" style="display: inline-flex;width:fit-content; gap: 10px;margin-bottom: 15px;" id="facial-sub-oac">
+                <hr style="width: 10vw;border: none; border-top: 2px solid #655b59;">
+                <img src="../beauty-svgrepo-com.svg" width="20px" height="20px">
+                <h4><b>oil & acne control</b></h4>
+            </div>
+            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
+                <div class="service-card-bgimg"></div>
+                <div class="service-card-text">
+                    <h4><b>Hydrafacial</b></h4>
+                    <p><b>Multi-step cleanse, extract, and hydrate treatment ideal for oily and congested skin types. </b><a href="#">Learn more -></a></p>
                 </div>
                     <div class="price-book-component">
                         <h5>from $169</h5>
@@ -156,11 +352,56 @@
             <div class="service-card d-flex flex-column flex-lg-column align-items-center">
                 <div class="service-card-bgimg"></div>
                 <div class="service-card-text">
-                    <h4><b>SkinCeuticals B5 Facial</b></h4>
-                    <p><b>Vitamin B5 and hyaluronic acid dual-action deep hydration facial — restoring moisture balance, softening fine lines, and leaving skin visibly plump. </b><a href="#">Learn more -></a></p>
+                    <h4><b>Chemical Peel</b></h4>
+                    <p><b>Medical-grade acids unclog pores, reduce active breakouts and prevent future ones. </b><a href="#">Learn more -></a></p>
                 </div>
                     <div class="price-book-component">
-                        <h5>from $188</h5>
+                        <h5>from $180</h5>
+                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
+                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
+                        </div>
+                    </div>
+            </div>
+            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
+                <div class="service-card-bgimg"></div>
+                <div class="service-card-text">
+                    <h4><b>POLA APEX Acne Control</b></h4>
+                    <p><b>Formulated for oily and acne-prone skin — controlling sebum, reducing inflammation, fading acne marks, and tightening enlarged pores. </b><a href="#">Learn more -></a></p>
+                </div>
+                    <div class="price-book-component">
+                        <h5>from $198</h5>
+                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
+                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
+                        </div>
+                    </div>
+            </div>
+            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
+                <div class="service-card-bgimg"></div>
+                <div class="service-card-text">
+                    <h4><b>GM Collin Oxygenating</b></h4>
+                    <p><b>Salicylic acid, AHA, and active oxygen formula fighting inflammation, fading pigmentation, clearing closed comedones, and tightening oily, congested skin. </b><a href="#">Learn more -></a></p>
+                </div>
+                    <div class="price-book-component">
+                        <h5>from $158</h5>
+                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
+                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
+                        </div>
+                    </div>
+            </div>
+            
+            <div class="full-row" style="display: inline-flex;width:fit-content; gap: 10px;margin-bottom: 15px;" id="facial-sub-aa">
+                <hr style="width: 10vw;border: none; border-top: 2px solid #655b59;">
+                <img src="../beauty-svgrepo-com.svg" width="20px" height="20px">
+                <h4><b>anti-aging</b></h4>
+            </div>
+            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
+                <div class="service-card-bgimg"></div>
+                <div class="service-card-text">
+                    <h4><b>Guinot Hydraderm</b></h4>
+                    <p><b>Combined hydration and lifting treatment — moisturising and locking water while tightening and lifting, comprehensively addressing dryness and sagging. </b><a href="#">Learn more -></a></p>
+                </div>
+                    <div class="price-book-component">
+                        <h5>from $198</h5>
                         <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
                             <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
                         </div>
@@ -195,58 +436,6 @@
             <div class="service-card d-flex flex-column flex-lg-column align-items-center">
                 <div class="service-card-bgimg"></div>
                 <div class="service-card-text">
-                    <h4><b>POLA APEX Acne Control</b></h4>
-                    <p><b>Formulated for oily and acne-prone skin — controlling sebum, reducing inflammation, fading acne marks, and tightening enlarged pores. </b><a href="#">Learn more -></a></p>
-                </div>
-                    <div class="price-book-component">
-                        <h5>from $198</h5>
-                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
-                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
-                        </div>
-                    </div>
-            </div>
-            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
-                <div class="service-card-bgimg"></div>
-                <div class="service-card-text">
-                    <h4><b>Guinot Perfect Firming</b></h4>
-                    <p><b>Microcurrent treatment tightening facial contours, improving laxity, smoothing fine lines, and restoring skin elasticity through targeted muscle re-education. </b><a href="#">Learn more -></a></p>
-                </div>
-                    <div class="price-book-component">
-                        <h5>from $158</h5>
-                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
-                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
-                        </div>
-                    </div>
-            </div>
-            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
-                <div class="service-card-bgimg"></div>
-                <div class="service-card-text">
-                    <h4><b>Guinot Dual Hydration + Firming</b></h4>
-                    <p><b>Combined hydration and lifting treatment — moisturising and locking water while tightening and lifting, comprehensively addressing dryness and sagging. </b><a href="#">Learn more -></a></p>
-                </div>
-                    <div class="price-book-component">
-                        <h5>from $198</h5>
-                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
-                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
-                        </div>
-                    </div>
-            </div>
-            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
-                <div class="service-card-bgimg"></div>
-                <div class="service-card-text">
-                    <h4><b>GM Collin Algomask Repair</b></h4>
-                    <p><b>Marine algae calming and repair treatment designed for sensitive skin — soothing redness, providing lasting hydration, and accelerating barrier recovery. </b><a href="#">Learn more -></a></p>
-                </div>
-                    <div class="price-book-component">
-                        <h5>from $158</h5>
-                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
-                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
-                        </div>
-                    </div>
-            </div>
-            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
-                <div class="service-card-bgimg"></div>
-                <div class="service-card-text">
                     <h4><b>GM Collin Collagen 90</b></h4>
                     <p><b>The world's first collagen mask treatment — biocompatible collagen replenishing aged, dry, and post-procedure skin with intensive nutrition and structural repair. </b><a href="#">Learn more -></a></p>
                 </div>
@@ -260,33 +449,7 @@
             <div class="service-card d-flex flex-column flex-lg-column align-items-center">
                 <div class="service-card-bgimg"></div>
                 <div class="service-card-text">
-                    <h4><b>GM Collin Sea C Spa</b></h4>
-                    <p><b>15% Vitamin C, peptides, and sea algae extract combined to brighten, antioxidise, and deeply restore dull, ageing skin to a luminous youthful radiance. </b><a href="#">Learn more -></a></p>
-                </div>
-                    <div class="price-book-component">
-                        <h5>from $158</h5>
-                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
-                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
-                        </div>
-                    </div>
-            </div>
-            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
-                <div class="service-card-bgimg"></div>
-                <div class="service-card-text">
-                    <h4><b>GM Collin Oxygenating</b></h4>
-                    <p><b>Salicylic acid, AHA, and active oxygen formula fighting inflammation, fading pigmentation, clearing closed comedones, and tightening oily, congested skin. </b><a href="#">Learn more -></a></p>
-                </div>
-                    <div class="price-book-component">
-                        <h5>from $158</h5>
-                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
-                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
-                        </div>
-                    </div>
-            </div>
-            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
-                <div class="service-card-bgimg"></div>
-                <div class="service-card-text">
-                    <h4><b>GM Collin Botinol Anti-Aging</b></h4>
+                    <h4><b>GM Collin Botinol Facial</b></h4>
                     <p><b>Retinol, Argireline, and hydrolysed okra protein smoothing expression lines and plumping skin, with copper peptides stimulating new fibroblast growth. </b><a href="#">Learn more -></a></p>
                 </div>
                     <div class="price-book-component">
@@ -296,22 +459,68 @@
                         </div>
                     </div>
             </div>
+            
+            <div class="full-row" style="display: inline-flex;width:fit-content; gap: 10px;margin-bottom: 15px;" id="facial-sub-ssr">
+                <hr style="width: 10vw;border: none; border-top: 2px solid #655b59;">
+                <img src="../beauty-svgrepo-com.svg" width="20px" height="20px">
+                <h4><b>sensitive skin & restoration</b></h4>
+            </div>
+            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
+                <div class="service-card-bgimg"></div>
+                <div class="service-card-text">
+                    <h4><b>GM Collin Algomask+ Facial</b></h4>
+                    <p><b>Marine algae calming and repair treatment designed for sensitive skin — soothing redness, providing lasting hydration, and accelerating barrier recovery. </b><a href="#">Learn more -></a></p>
+                </div>
+                    <div class="price-book-component">
+                        <h5>from $158</h5>
+                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
+                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
+                        </div>
+                    </div>
+            </div>
+            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
+                <div class="service-card-bgimg"></div>
+                <div class="service-card-text">
+                    <h4><b>SkinCeuticals Phyto Facial</b></h4>
+                    <p><b>Vitamin B5 and hyaluronic acid dual-action deep hydration facial — restoring moisture balance, softening fine lines, and leaving skin visibly plump. </b><a href="#">Learn more -></a></p>
+                </div>
+                    <div class="price-book-component">
+                        <h5>from $188</h5>
+                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
+                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
+                        </div>
+                    </div>
+            </div>
+            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
+                <div class="service-card-bgimg"></div>
+                <div class="service-card-text">
+                    <h4><b>TargetCool</b></h4>
+                    <p><b>placeholder </b><a href="#">Learn more -></a></p>
+                </div>
+                    <div class="price-book-component">
+                        <h5>from $</h5>
+                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
+                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
+                        </div>
+                    </div>
+            </div>
         </div>
-        <div class="laserhair-results results">
+        <div class="lift-tight-results results">
             <div class="full-row" style="display: inline-flex;width:fit-content; gap: 10px;margin-bottom: 15px;">
                 <hr style="width: 10vw;border: none; border-top: 2px solid #655b59;">
                 <img src="../beauty-svgrepo-com.svg" width="20px" height="20px">
-                <h4><b>laser hair removal</b></h4>
+                <h4><b>lifting & tightening</b></h4>
             </div>
             <div class="full-row">FDA-cleared ELITE+ dual-wavelength laser hair removal — 755nm Alexandrite and 1064nm Nd:YAG targeting melanin in the hair follicle for permanent reduction across all skin tones.</div>
             <div class="service-card d-flex flex-column flex-lg-column align-items-center">
                 <div class="service-card-bgimg"></div>
                 <div class="service-card-text">
-                    <h4><b>Upper Lip</b></h4>
-                    <p><b>Precise removal of upper lip hair. Recommended every 4–6 weeks. Annual package available for ongoing maintenance. </b><a href="#">Learn more -></a></p>
+                    <p style="background-color: #4a382d;padding: 1px 6px; color:#d1cdc6;font-size: 10px;margin-left: 10px;width: fit-content;"><b>NEW</b></p>
+                    <h4><b>XERF Lifting</b></h4>
+                    <p><b>Next-generation extended RF technology delivering continuous thermal energy to the deep dermis for superior tightening. </b><a href="xerf.html">Learn more -></a></p>
                 </div>
                     <div class="price-book-component">
-                        <h5>Single $69 / 5-Pack $299</h5>
+                        <h5>from $1,500</h5>
                         <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
                             <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
                         </div>
@@ -320,11 +529,11 @@
             <div class="service-card d-flex flex-column flex-lg-column align-items-center">
                 <div class="service-card-bgimg"></div>
                 <div class="service-card-text">
-                    <h4><b>Underarms</b></h4>
-                    <p><b>Full underarm hair removal. Recommended every 4–6 weeks. Annual unlimited package available. </b><a href="#">Learn more -></a></p>
+                    <h4><b>Thermage FLX</b></h4>
+                    <p><b>Monopolar radiofrequency tightening deep collagen for a lifted, smoothed appearance that improves for up to six months. </b><a href="#">Learn more -></a></p>
                 </div>
                     <div class="price-book-component">
-                        <h5>Single $89 / 5-Pack $399</h5>
+                        <h5>from $2,100</h5>
                         <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
                             <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
                         </div>
@@ -333,11 +542,11 @@
             <div class="service-card d-flex flex-column flex-lg-column align-items-center">
                 <div class="service-card-bgimg"></div>
                 <div class="service-card-text">
-                    <h4><b>Lower Leg / Bikini / Full Face</b></h4>
-                    <p><b>Precision removal for lower legs, bikini line, or full face. Recommended every 4–6 weeks. </b><a href="#">Learn more -></a></p>
+                    <h4><b>Ultherapy HIFU</b></h4>
+                    <p><b>FDA-cleared ultrasound energy at the SMAS layer — the same plane targeted in surgical facelifts — for significant lift. </b><a href="#">Learn more -></a></p>
                 </div>
                     <div class="price-book-component">
-                        <h5>Single $119 / 5-Pack $499</h5>
+                        <h5>from $2,000</h5>
                         <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
                             <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
                         </div>
@@ -346,11 +555,11 @@
             <div class="service-card d-flex flex-column flex-lg-column align-items-center">
                 <div class="service-card-bgimg"></div>
                 <div class="service-card-text">
-                    <h4><b>Full Leg</b></h4>
-                    <p><b>Complete full-leg hair removal from ankle to upper thigh. Recommended every 8–12 weeks. Two-year package available. </b><a href="#">Learn more -></a></p>
+                    <h4><b>TempSure</b></h4>
+                    <p><b>High-velocity, needle-free collagen induction delivering actives to precise depths for immediate firmness. </b><a href="#">Learn more -></a></p>
                 </div>
                     <div class="price-book-component">
-                        <h5>Single $169 / 5-Pack $699</h5>
+                        <h5>from $480</h5>
                         <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
                             <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
                         </div>
@@ -359,11 +568,11 @@
             <div class="service-card d-flex flex-column flex-lg-column align-items-center">
                 <div class="service-card-bgimg"></div>
                 <div class="service-card-text">
-                    <h4><b>Full Arm / Brazilian / Full Back</b></h4>
-                    <p><b>Comprehensive removal for full arms, Brazilian, or full back. Recommended every 4–8 weeks. Annual package available. </b><a href="#">Learn more -></a></p>
+                    <h4><b>Fotona</b></h4>
+                    <p><b>Four-pass laser protocol tightening the full facial structure from inside the oral cavity outward. </b><a href="#">Learn more -></a></p>
                 </div>
                     <div class="price-book-component">
-                        <h5>Single $169 / 5-Pack $699</h5>
+                        <h5>from $899</h5>
                         <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
                             <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
                         </div>
@@ -372,29 +581,74 @@
             <div class="service-card d-flex flex-column flex-lg-column align-items-center">
                 <div class="service-card-bgimg"></div>
                 <div class="service-card-text">
-                    <h4><b>Small Area / Custom</b></h4>
-                    <p><b></b><a href="#">Learn more -></a></p>
+                    <h4><b>EMFACE</b></h4>
+                    <p><b>placeholder </b><a href="#">Learn more -></a></p>
                 </div>
                     <div class="price-book-component">
-                        <h5>from $99</h5>
+                        <h5>from $</h5>
                         <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
                             <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
                         </div>
                     </div>
             </div>
         </div>
-        <div class="acne-results results">
-            <div class="full-row" style="display: inline-flex;width:fit-content; gap: 10px;margin-bottom: 15px;">
+        <div class="texture-results results">
+            <div class="full-row" style="display: inline-flex;width:fit-content; gap: 10px;margin-bottom: 15px;width: 100%;;">
+                <hr style="width: 100%;border: none; border-top: 2px solid #655b59;">
+                <img src="../beauty-svgrepo-com.svg" width="20px" height="20px">
+                <h3 style="white-space: nowrap;"><b>skin rejuvention & texture</b></h3>
+                <hr style="width: 100%;border: none; border-top: 2px solid #655b59;">
+            </div>
+
+            <div class="full-row" style="display: inline-flex;width:fit-content; gap: 10px;margin-bottom: 15px;" id="texture-sub-sb">
                 <hr style="width: 10vw;border: none; border-top: 2px solid #655b59;">
                 <img src="../beauty-svgrepo-com.svg" width="20px" height="20px">
-                <h4><b>acne treatments</b></h4>
+                <h4><b>skin boosters</b></h4>
             </div>
-            <div class="full-row">From persistent adult acne to occasional breakouts, our targeted treatments address root causes — excess sebum, bacterial overgrowth, and inflammation — to leave skin clear and calm.</div>
             <div class="service-card d-flex flex-column flex-lg-column align-items-center">
                 <div class="service-card-bgimg"></div>
                 <div class="service-card-text">
-                    <h4><b>M22 AOPT Photofacial</b></h4>
-                    <p><b>Broad-spectrum light therapy targeting acne bacteria and post-inflammatory redness simultaneously. </b><a href="#">Learn more -></a></p>
+                    <h4><b>Rejuran Skin Booster</b></h4>
+                    <p><b>placeholder </b><a href="#">Learn more -></a></p>
+                </div>
+                    <div class="price-book-component">
+                        <h5>from $</h5>
+                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
+                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
+                        </div>
+                    </div>
+            </div>
+            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
+                <div class="service-card-bgimg"></div>
+                <div class="service-card-text">
+                    <h4><b>Rejuran Eye Booster</b></h4>
+                    <p><b>placeholder </b><a href="#">Learn more -></a></p>
+                </div>
+                    <div class="price-book-component">
+                        <h5>from $</h5>
+                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
+                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
+                        </div>
+                    </div>
+            </div>
+            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
+                <div class="service-card-bgimg"></div>
+                <div class="service-card-text">
+                    <h4><b>Rejuran Tone Up</b></h4>
+                    <p><b>placeholder </b><a href="#">Learn more -></a></p>
+                </div>
+                    <div class="price-book-component">
+                        <h5>from $</h5>
+                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
+                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
+                        </div>
+                    </div>
+            </div>
+            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
+                <div class="service-card-bgimg"></div>
+                <div class="service-card-text">
+                    <h4><b>Rejuran Healing Essence</b></h4>
+                    <p><b>Salmon-derived PDRN skin booster that repairs damaged collagen fibres and stimulates new collagen production from within. </b><a href="#">Learn more -></a></p>
                 </div>
                     <div class="price-book-component">
                         <h5>from $499</h5>
@@ -403,19 +657,177 @@
                         </div>
                     </div>
             </div>
+            
+            <div class="full-row" style="display: inline-flex;width:fit-content; gap: 10px;margin-bottom: 15px;" id="texture-sub-mn">
+                <hr style="width: 10vw;border: none; border-top: 2px solid #655b59;">
+                <img src="../beauty-svgrepo-com.svg" width="20px" height="20px">
+                <h4><b>microneedling</b></h4>
+            </div>
             <div class="service-card d-flex flex-column flex-lg-column align-items-center">
                 <div class="service-card-bgimg"></div>
                 <div class="service-card-text">
-                    <h4><b>Fotona Acne Laser</b></h4>
-                    <p><b>Nd:YAG laser penetrating deep into the dermis to destroy acne-causing bacteria and shrink sebaceous glands. </b><a href="#">Learn more -></a></p>
+                    <h4><b>Endymed Gold RF</b></h4>
+                    <p><b>Fractional radiofrequency through insulated gold needles precisely shrinking sebaceous glands and tightening pore walls. </b><a href="#">Learn more -></a></p>
                 </div>
                     <div class="price-book-component">
-                        <h5>from $420</h5>
+                        <h5>from $799</h5>
                         <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
                             <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
                         </div>
                     </div>
             </div>
+            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
+                <div class="service-card-bgimg"></div>
+                <div class="service-card-text">
+                    <h4><b>PRP Scalp Restoration</b></h4>
+                    <p><b>Platelet-rich plasma from your own blood injected into the scalp to stimulate dormant follicles and promote regrowth. </b><a href="#">Learn more -></a></p>
+                </div>
+                    <div class="price-book-component">
+                        <h5>from $680</h5>
+                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
+                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
+                        </div>
+                    </div>
+            </div>
+            
+            <div class="full-row" style="display: inline-flex;width:fit-content; gap: 10px;margin-bottom: 15px;" id="texture-sub-l">
+                <hr style="width: 10vw;border: none; border-top: 2px solid #655b59;">
+                <img src="../beauty-svgrepo-com.svg" width="20px" height="20px">
+                <h4><b>laser</b></h4>
+            </div>
+            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
+                <div class="service-card-bgimg"></div>
+                <div class="service-card-text">
+                    <h4><b>M22 AOPT IPL</b></h4>
+                    <p><b>Intense pulsed light targeting vascular redness and diffuse rosacea, evening skin tone over a series of treatments. </b><a href="#">Learn more -></a></p>
+                </div>
+                    <div class="price-book-component">
+                        <h5>from $380</h5>
+                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
+                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
+                        </div>
+                    </div>
+            </div>
+            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
+                <div class="service-card-bgimg"></div>
+                <div class="service-card-text">
+                    <h4><b>Resurfax Non-Ablative Laser</b></h4>
+                    <p><b>placeholder </b><a href="#">Learn more -></a></p>
+                </div>
+                    <div class="price-book-component">
+                        <h5>from $</h5>
+                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
+                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
+                        </div>
+                    </div>
+            </div>
+            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
+                <div class="service-card-bgimg"></div>
+                <div class="service-card-text">
+                    <h4><b>Acupulse CO₂ Laser</b></h4>
+                    <p><b>Fractional ablative laser resurfacing deep wrinkles and stimulating significant new collagen formation. </b><a href="#">Learn more -></a></p>
+                </div>
+                    <div class="price-book-component">
+                        <h5>from $799</h5>
+                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
+                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
+                        </div>
+                    </div>
+            </div>
+            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
+                <div class="service-card-bgimg"></div>
+                <div class="service-card-text">
+                    <h4><b>Fotona</b></h4>
+                    <p><b>Multi-wavelength laser addressing skin laxity at four tissue depths in a single session. </b><a href="#">Learn more -></a></p>
+                </div>
+                    <div class="price-book-component">
+                        <h5>from $899</h5>
+                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
+                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="pigment-results results">
+            <div class="full-row" style="display: inline-flex;width:fit-content; gap: 10px;margin-bottom: 15px;">
+                <hr style="width: 10vw;border: none; border-top: 2px solid #655b59;">
+                <img src="../beauty-svgrepo-com.svg" width="20px" height="20px">
+                <h4><b>pigmentation & dark spots</b></h4>
+            </div>
+            <div class="full-row">Sun damage, melasma, post-inflammatory hyperpigmentation — our pigment-correcting protocols precisely target excess melanin at every skin depth without disrupting surrounding tissue.</div>
+            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
+                <div class="service-card-bgimg"></div>
+                <div class="service-card-text">
+                    <h4><b>M22 AOPT IPL</b></h4>
+                    <p><b>Intense pulsed light targeting vascular redness and diffuse rosacea, evening skin tone over a series of treatments. </b><a href="#">Learn more -></a></p>
+                </div>
+                    <div class="price-book-component">
+                        <h5>from $380</h5>
+                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
+                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
+                        </div>
+                    </div>
+            </div>
+            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
+                <div class="service-card-bgimg"></div>
+                <div class="service-card-text">
+                    <h4><b>Picosure Laser</b></h4>
+                    <p><b>Ultra-short picosecond pulses shatter pigment particles without heat damage, ideal for stubborn melasma and sunspots. </b><a href="#">Learn more -></a></p>
+                </div>
+                    <div class="price-book-component">
+                        <h5>from $699</h5>
+                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
+                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
+                        </div>
+                    </div>
+            </div>
+            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
+                <div class="service-card-bgimg"></div>
+                <div class="service-card-text">
+                    <h4><b>Rejuran Tone Up</b></h4>
+                    <p><b>placeholder </b><a href="#">Learn more -></a></p>
+                </div>
+                    <div class="price-book-component">
+                        <h5>from $</h5>
+                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
+                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
+                        </div>
+                    </div>
+            </div>
+            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
+                <div class="service-card-bgimg"></div>
+                <div class="service-card-text">
+                    <h4><b>VI Peel</b></h4>
+                    <p><b>placeholder </b><a href="#">Learn more -></a></p>
+                </div>
+                    <div class="price-book-component">
+                        <h5>from $</h5>
+                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
+                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
+                        </div>
+                    </div>
+            </div>
+            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
+                <div class="service-card-bgimg"></div>
+                <div class="service-card-text">
+                    <h4><b>Chemical Peel</b></h4>
+                    <p><b>Medical-grade acids unclog pores, reduce active breakouts and prevent future ones. </b><a href="#">Learn more -></a></p>
+                </div>
+                    <div class="price-book-component">
+                        <h5>from $180</h5>
+                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
+                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="ros-acne-results results">
+            <div class="full-row" style="display: inline-flex;width:fit-content; gap: 10px;margin-bottom: 15px;">
+                <hr style="width: 10vw;border: none; border-top: 2px solid #655b59;">
+                <img src="../beauty-svgrepo-com.svg" width="20px" height="20px">
+                <h4><b>acne & rosecea & scar</b></h4>
+            </div>
+            <div class="full-row">placeholder</div>
             <div class="service-card d-flex flex-column flex-lg-column align-items-center">
                 <div class="service-card-bgimg"></div>
                 <div class="service-card-text">
@@ -442,22 +854,14 @@
                         </div>
                     </div>
             </div>
-        </div>
-        <div class="pigment-results results">
-            <div class="full-row" style="display: inline-flex;width:fit-content; gap: 10px;margin-bottom: 15px;">
-                <hr style="width: 10vw;border: none; border-top: 2px solid #655b59;">
-                <img src="../beauty-svgrepo-com.svg" width="20px" height="20px">
-                <h4><b>pigmentation & dark spots</b></h4>
-            </div>
-            <div class="full-row">Sun damage, melasma, post-inflammatory hyperpigmentation — our pigment-correcting protocols precisely target excess melanin at every skin depth without disrupting surrounding tissue.</div>
             <div class="service-card d-flex flex-column flex-lg-column align-items-center">
                 <div class="service-card-bgimg"></div>
                 <div class="service-card-text">
-                    <h4><b>Picosure Laser</b></h4>
-                    <p><b>Ultra-short picosecond pulses shatter pigment particles without heat damage, ideal for stubborn melasma and sunspots. </b><a href="#">Learn more -></a></p>
+                    <h4><b>M22 AOPT IPL</b></h4>
+                    <p><b>Intense pulsed light targeting vascular redness and diffuse rosacea, evening skin tone over a series of treatments. </b><a href="#">Learn more -></a></p>
                 </div>
                     <div class="price-book-component">
-                        <h5>from $699</h5>
+                        <h5>from $380</h5>
                         <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
                             <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
                         </div>
@@ -466,11 +870,11 @@
             <div class="service-card d-flex flex-column flex-lg-column align-items-center">
                 <div class="service-card-bgimg"></div>
                 <div class="service-card-text">
-                    <h4><b>Rejuran White Porcelain</b></h4>
-                    <p><b>Polynucleotide booster combined with brightening actives to repair the skin barrier and suppress melanin. </b><a href="#">Learn more -></a></p>
+                    <h4><b>RF Microneedling</b></h4>
+                    <p><b>Fractional radiofrequency through insulated gold needles precisely shrinking sebaceous glands and tightening pore walls. </b><a href="#">Learn more -></a></p>
                 </div>
                     <div class="price-book-component">
-                        <h5>from $399</h5>
+                        <h5>from $799</h5>
                         <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
                             <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
                         </div>
@@ -479,32 +883,11 @@
             <div class="service-card d-flex flex-column flex-lg-column align-items-center">
                 <div class="service-card-bgimg"></div>
                 <div class="service-card-text">
-                    <h4><b>Skin Brightening Facial</b></h4>
-                    <p><b>Enzyme-based treatment infusing vitamin C, niacinamide, and kojic acid for immediate luminosity. </b><a href="#">Learn more -></a></p>
+                    <h4><b>Resurfax Non-Ablative Laser</b></h4>
+                    <p><b>placeholder </b><a href="#">Learn more -></a></p>
                 </div>
                     <div class="price-book-component">
-                        <h5>from $150</h5>
-                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
-                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
-                        </div>
-                    </div>
-            </div>
-        </div>
-        <div class="lines-results results">
-            <div class="full-row" style="display: inline-flex;width:fit-content; gap: 10px;margin-bottom: 15px;">
-                <hr style="width: 10vw;border: none; border-top: 2px solid #655b59;">
-                <img src="../beauty-svgrepo-com.svg" width="20px" height="20px">
-                <h4><b>fine lines & wrinkles</b></h4>
-            </div>
-            <div class="full-row">Dynamic expression lines, static creases, and volume loss each require a specific approach. Our physicians combine neuromodulators, fillers, and energy devices for comprehensive rejuvenation.</div>
-            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
-                <div class="service-card-bgimg"></div>
-                <div class="service-card-text">
-                    <h4><b>TempSure RF</b></h4>
-                    <p><b>Cynosure's monopolar radiofrequency device delivering controlled thermal energy to tighten skin, smooth fine lines, and improve nasolabial folds with no downtime. </b><a href="#">Learn more -></a></p>
-                </div>
-                    <div class="price-book-component">
-                        <h5>from $499</h5>
+                        <h5>from $</h5>
                         <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
                             <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
                         </div>
@@ -513,11 +896,50 @@
             <div class="service-card d-flex flex-column flex-lg-column align-items-center">
                 <div class="service-card-bgimg"></div>
                 <div class="service-card-text">
-                    <h4><b>Botox / Xeomin</b></h4>
-                    <p><b>FDA-approved neuromodulators precisely relaxing overactive facial muscles to smooth forehead and frown lines. </b><a href="#">Learn more -></a></p>
+                    <h4><b>Fotona</b></h4>
+                    <p><b>Multi-wavelength laser addressing skin laxity at four tissue depths in a single session. </b><a href="#">Learn more -></a></p>
                 </div>
                     <div class="price-book-component">
-                        <h5>from $450/50 units</h5>
+                        <h5>from $899</h5>
+                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
+                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
+                        </div>
+                    </div>
+            </div>
+            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
+                <div class="service-card-bgimg"></div>
+                <div class="service-card-text">
+                    <h4><b>Skin Toxin (Injections)</b></h4>
+                    <p><b>placeholder </b><a href="#">Learn more -></a></p>
+                </div>
+                    <div class="price-book-component">
+                        <h5>from $</h5>
+                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
+                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
+                        </div>
+                    </div>
+            </div>
+            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
+                <div class="service-card-bgimg"></div>
+                <div class="service-card-text">
+                    <h4><b>Fotona Veins and Vascular</b></h4>
+                    <p><b>Nd:YAG laser selectively absorbed by haemoglobin, collapsing facial veins and telangiectasia with no surrounding damage. </b><a href="#">Learn more -></a></p>
+                </div>
+                    <div class="price-book-component">
+                        <h5>from $380</h5>
+                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
+                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
+                        </div>
+                    </div>
+            </div>
+            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
+                <div class="service-card-bgimg"></div>
+                <div class="service-card-text">
+                    <h4><b>TempSure</b></h4>
+                    <p><b>High-velocity, needle-free collagen induction delivering actives to precise depths for immediate firmness. </b><a href="#">Learn more -></a></p>
+                </div>
+                    <div class="price-book-component">
+                        <h5>from $480</h5>
                         <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
                             <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
                         </div>
@@ -575,74 +997,27 @@
                         </div>
                     </div>
             </div>
-            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
-                <div class="service-card-bgimg"></div>
-                <div class="service-card-text">
-                    <h4><b>Acupulse CO₂ Laser</b></h4>
-                    <p><b>Fractional ablative laser resurfacing deep wrinkles and stimulating significant new collagen formation. </b><a href="#">Learn more -></a></p>
-                </div>
-                    <div class="price-book-component">
-                        <h5>from $799</h5>
-                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
-                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
-                        </div>
-                    </div>
-            </div>
         </div>
-        <div class="sagging-results results">
+        <div class="inj-results results">
             <div class="full-row" style="display: inline-flex;width:fit-content; gap: 10px;margin-bottom: 15px;">
                 <hr style="width: 10vw;border: none; border-top: 2px solid #655b59;">
                 <img src="../beauty-svgrepo-com.svg" width="20px" height="20px">
-                <h4><b>sagging & lifting</b></h4>
+                <h4><b>injections & iv</b></h4>
             </div>
-            <div class="full-row">Gravity, volume loss, and collagen decline all contribute to facial sagging. Our lifting protocols deliver focused energy at precise tissue depths to tighten, reposition, and rebuild structural support.</div>
+            <div class="full-row" style="display: inline-flex;width:fit-content; gap: 10px;margin-bottom: 15px;" id="inj-sub-in">
+                <hr style="width: 10vw;border: none; border-top: 2px solid #655b59;">
+                <img src="../beauty-svgrepo-com.svg" width="20px" height="20px">
+                <h4><b>injections</b></h4>
+            </div>
+            <div class="full-row">placeholder</div>
             <div class="service-card d-flex flex-column flex-lg-column align-items-center">
                 <div class="service-card-bgimg"></div>
                 <div class="service-card-text">
-                    <h4><b>Ultherapy HIFU</b></h4>
-                    <p><b>FDA-cleared ultrasound energy at the SMAS layer — the same plane targeted in surgical facelifts — for significant lift. </b><a href="#">Learn more -></a></p>
+                    <h4><b>Botox / Xeomin</b></h4>
+                    <p><b>FDA-approved neuromodulators precisely relaxing overactive facial muscles to smooth forehead and frown lines. </b><a href="#">Learn more -></a></p>
                 </div>
                     <div class="price-book-component">
-                        <h5>from $2,000</h5>
-                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
-                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
-                        </div>
-                    </div>
-            </div>
-            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
-                <div class="service-card-bgimg"></div>
-                <div class="service-card-text">
-                    <h4><b>Thermage FLX</b></h4>
-                    <p><b>Deep monopolar RF tightening the dermis and subcutaneous tissue with results lasting up to two years. </b><a href="#">Learn more -></a></p>
-                </div>
-                    <div class="price-book-component">
-                        <h5>from $2,100</h5>
-                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
-                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
-                        </div>
-                    </div>
-            </div>
-            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
-                <div class="service-card-bgimg"></div>
-                <div class="service-card-text">
-                    <h4><b>Fotona 4D Pro</b></h4>
-                    <p><b>Multi-wavelength laser addressing skin laxity at four tissue depths in a single session. </b><a href="#">Learn more -></a></p>
-                </div>
-                    <div class="price-book-component">
-                        <h5>from $899</h5>
-                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
-                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
-                        </div>
-                    </div>
-            </div>
-            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
-                <div class="service-card-bgimg"></div>
-                <div class="service-card-text">
-                    <h4><b>Collagen Cannon</b></h4>
-                    <p><b>High-velocity, needle-free collagen induction delivering actives to precise depths for immediate firmness. </b><a href="#">Learn more -></a></p>
-                </div>
-                    <div class="price-book-component">
-                        <h5>from $480</h5>
+                        <h5>from $450/50 units</h5>
                         <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
                             <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
                         </div>
@@ -664,33 +1039,68 @@
             <div class="service-card d-flex flex-column flex-lg-column align-items-center">
                 <div class="service-card-bgimg"></div>
                 <div class="service-card-text">
-                    <p style="background-color: #655b59;padding: 1px 6px; color:#d1cdc6;font-size: 10px;margin-left: 10px;width: fit-content;"><b>NEW</b></p>
-                    <h4><b>XERF Lifting</b></h4>
-                    <p><b>Next-generation extended RF technology delivering continuous thermal energy to the deep dermis for superior tightening. </b><a href="#">Learn more -></a></p>
+                    <h4><b>Kybella</b></h4>
+                    <p><b>FDA-approved deoxycholic acid treatment permanently destroying submental fat cells under the chin to improve your profile and reduce the appearance of a double chin. </b><a href="#">Learn more -></a></p>
                 </div>
                     <div class="price-book-component">
-                        <h5>from $1,500</h5>
+                        <h5>from $499/vial</h5>
+                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
+                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
+                        </div>
+                    </div>
+            </div>
+            <div class="full-row" style="display: inline-flex;width:fit-content; gap: 10px;margin-bottom: 15px;" id="inj-sub-iv">
+                <hr style="width: 10vw;border: none; border-top: 2px solid #655b59;">
+                <img src="../beauty-svgrepo-com.svg" width="20px" height="20px">
+                <h4><b>iv</b></h4>
+            </div>
+            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
+                <div class="service-card-bgimg"></div>
+                <div class="service-card-text">
+                    <h4><b>Vitamin C Brighten IV</b></h4>
+                    <p><b>placeholder </b><a href="#">Learn more -></a></p>
+                </div>
+                    <div class="price-book-component">
+                        <h5>from $</h5>
+                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
+                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
+                        </div>
+                    </div>
+            </div>
+            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
+                <div class="service-card-bgimg"></div>
+                <div class="service-card-text">
+                    <h4><b>NAD+ Metabolism IV</b></h4>
+                    <p><b>placeholder </b><a href="#">Learn more -></a></p>
+                </div>
+                    <div class="price-book-component">
+                        <h5>from $</h5>
                         <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
                             <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
                         </div>
                     </div>
             </div>
         </div>
-        <div class="pores-results results">
-            <div class="full-row" style="display: inline-flex;width:fit-content; gap: 10px;margin-bottom: 15px;">
+        <div class="well-results results">
+            <div class="full-row" style="display: inline-flex;width:fit-content; gap: 10px;margin-bottom: 15px;width: 100%;;">
+                <hr style="width: 100%;border: none; border-top: 2px solid #655b59;">
+                <img src="../beauty-svgrepo-com.svg" width="20px" height="20px">
+                <h3 style="white-space: nowrap;"><b>wellness & relaxation</b></h3>
+                <hr style="width: 100%;border: none; border-top: 2px solid #655b59;">
+            </div>
+            <div class="full-row" style="display: inline-flex;width:fit-content; gap: 10px;margin-bottom: 15px;" id="well-sub-at">
                 <hr style="width: 10vw;border: none; border-top: 2px solid #655b59;">
                 <img src="../beauty-svgrepo-com.svg" width="20px" height="20px">
-                <h4><b>enlarged pores</b></h4>
+                <h4><b>aromatherapies</b></h4>
             </div>
-            <div class="full-row">Enlarged pores stem from excess sebum, reduced skin elasticity, and sun damage. Our pore-minimising treatments address all three causes for a refined, porcelain-smooth complexion.</div>
             <div class="service-card d-flex flex-column flex-lg-column align-items-center">
                 <div class="service-card-bgimg"></div>
                 <div class="service-card-text">
-                    <h4><b>Endymed Gold RF</b></h4>
-                    <p><b>Fractional radiofrequency through insulated gold needles precisely shrinking sebaceous glands and tightening pore walls. </b><a href="#">Learn more -></a></p>
+                    <h4><b>RF</b></h4>
+                    <p><b>placeholder </b><a href="#">Learn more -></a></p>
                 </div>
                     <div class="price-book-component">
-                        <h5>from $799</h5>
+                        <h5>from $</h5>
                         <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
                             <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
                         </div>
@@ -699,199 +1109,99 @@
             <div class="service-card d-flex flex-column flex-lg-column align-items-center">
                 <div class="service-card-bgimg"></div>
                 <div class="service-card-text">
-                    <h4><b>Picosure Laser</b></h4>
-                    <p><b>Picosecond laser stimulating collagen via pressure waves, refining texture and reducing pore visibility. </b><a href="#">Learn more -></a></p>
+                    <h4><b>Ultrasound</b></h4>
+                    <p><b>placeholder </b><a href="#">Learn more -></a></p>
                 </div>
                     <div class="price-book-component">
-                        <h5>from $699</h5>
+                        <h5>from $</h5>
+                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
+                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
+                        </div>
+                    </div>
+            </div>
+            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
+                <div class="service-card-bgimg"></div>
+                <div class="service-card-text">
+                    <h4><b>Regular</b></h4>
+                    <p><b>placeholder </b><a href="#">Learn more -></a></p>
+                </div>
+                    <div class="price-book-component">
+                        <h5>from $</h5>
+                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
+                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
+                        </div>
+                    </div>
+            </div>
+            <div class="full-row" style="display: inline-flex;width:fit-content; gap: 10px;margin-bottom: 15px;" id="well-sub-ht">
+                <hr style="width: 10vw;border: none; border-top: 2px solid #655b59;">
+                <img src="../beauty-svgrepo-com.svg" width="20px" height="20px">
+                <h4><b>head therapy</b></h4>
+            </div>
+            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
+                <div class="service-card-bgimg"></div>
+                <div class="service-card-text">
+                    <h4><b>Thai Head Therapy</b></h4>
+                    <p><b>placeholder </b><a href="#">Learn more -></a></p>
+                </div>
+                    <div class="price-book-component">
+                        <h5>from $</h5>
+                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
+                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
+                        </div>
+                    </div>
+            </div>
+            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
+                <div class="service-card-bgimg"></div>
+                <div class="service-card-text">
+                    <h4><b>HydraScalp</b></h4>
+                    <p><b>placeholder </b><a href="#">Learn more -></a></p>
+                </div>
+                    <div class="price-book-component">
+                        <h5>from $</h5>
                         <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
                             <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
                         </div>
                     </div>
             </div>
         </div>
-        <div class="redness-results results">
-            <div class="full-row" style="display: inline-flex;width:fit-content; gap: 10px;margin-bottom: 15px;">
+        <div class="weight-results results">
+            <div class="full-row" style="display: inline-flex;width:fit-content; gap: 10px;margin-bottom: 15px;width: 100%;;">
+                <hr style="width: 100%;border: none; border-top: 2px solid #655b59;">
+                <img src="../beauty-svgrepo-com.svg" width="20px" height="20px">
+                <h3 style="white-space: nowrap;"><b>weight loss & contouring</b></h3>
+                <hr style="width: 100%;border: none; border-top: 2px solid #655b59;">
+            </div>
+            <div class="full-row" style="display: inline-flex;width:fit-content; gap: 10px;margin-bottom: 15px;" id="weight-sub-wl">
                 <hr style="width: 10vw;border: none; border-top: 2px solid #655b59;">
                 <img src="../beauty-svgrepo-com.svg" width="20px" height="20px">
-                <h4><b>redness & sensitivity</b></h4>
+                <h4><b>weight loss</b></h4>
             </div>
-            <div class="full-row">Rosacea, broken capillaries, and reactive skin require gentle precision. Our vascular treatments selectively target and collapse problematic vessels while restoring the skin barrier.</div>
             <div class="service-card d-flex flex-column flex-lg-column align-items-center">
                 <div class="service-card-bgimg"></div>
                 <div class="service-card-text">
-                    <h4><b>Fotona Red Vein Removal</b></h4>
-                    <p><b>Nd:YAG laser selectively absorbed by haemoglobin, collapsing facial veins and telangiectasia with no surrounding damage. </b><a href="#">Learn more -></a></p>
+                    <h4><b>Tirzepetide</b></h4>
+                    <p><b>placeholder </b><a href="#">Learn more -></a></p>
                 </div>
                     <div class="price-book-component">
-                        <h5>from $380</h5>
+                        <h5>from $</h5>
                         <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
                             <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
                         </div>
                     </div>
             </div>
-            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
-                <div class="service-card-bgimg"></div>
-                <div class="service-card-text">
-                    <h4><b>M22 AOPT IPL</b></h4>
-                    <p><b>Intense pulsed light targeting vascular redness and diffuse rosacea, evening skin tone over a series of treatments. </b><a href="#">Learn more -></a></p>
-                </div>
-                    <div class="price-book-component">
-                        <h5>from $380</h5>
-                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
-                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
-                        </div>
-                    </div>
-            </div>
-            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
-                <div class="service-card-bgimg"></div>
-                <div class="service-card-text">
-                    <h4><b>Exosome Skin Booster</b></h4>
-                    <p><b>Plant-derived exosomes delivering growth factors that repair the skin barrier and calm chronic inflammatory responses. </b><a href="#">Learn more -></a></p>
-                </div>
-                    <div class="price-book-component">
-                        <h5>from $580</h5>
-                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
-                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
-                        </div>
-                    </div>
-            </div>
-            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
-                <div class="service-card-bgimg"></div>
-                <div class="service-card-text">
-                    <h4><b>Algomask Repair Facial</b></h4>
-                    <p><b>Professional calming treatment using marine algae actives to reduce transient redness and restore barrier function. </b><a href="#">Learn more -></a></p>
-                </div>
-                    <div class="price-book-component">
-                        <h5>from $160</h5>
-                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
-                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
-                        </div>
-                    </div>
-            </div>
-        </div>
-        <div class="hair-results results">
-            <div class="full-row" style="display: inline-flex;width:fit-content; gap: 10px;margin-bottom: 15px;">
+            <div class="full-row" style="display: inline-flex;width:fit-content; gap: 10px;margin-bottom: 15px;" id="weight-sub-bc">
                 <hr style="width: 10vw;border: none; border-top: 2px solid #655b59;">
                 <img src="../beauty-svgrepo-com.svg" width="20px" height="20px">
-                <h4><b>hair loss & thinning</b></h4>
-            </div>
-            <div class="full-row">Androgenetic alopecia, postpartum shedding, and stress-related thinning all respond to our evidence-based hair restoration protocols that stimulate follicle activity from within.</div>
-            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
-                <div class="service-card-bgimg"></div>
-                <div class="service-card-text">
-                    <h4><b>PRP Scalp Restoration</b></h4>
-                    <p><b>Platelet-rich plasma from your own blood injected into the scalp to stimulate dormant follicles and promote regrowth. </b><a href="#">Learn more -></a></p>
-                </div>
-                    <div class="price-book-component">
-                        <h5>from $680</h5>
-                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
-                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
-                        </div>
-                    </div>
+                <h4><b>body contouring</b></h4>
             </div>
             <div class="service-card d-flex flex-column flex-lg-column align-items-center">
                 <div class="service-card-bgimg"></div>
                 <div class="service-card-text">
-                    <h4><b>Fotona Hair Growth</b></h4>
-                    <p><b>Low-level laser therapy increasing blood flow to follicles and extending the anagen growth phase. </b><a href="#">Learn more -></a></p>
+                    <h4><b>EMSCULPT NEO</b></h4>
+                    <p><b>placeholder </b><a href="#">Learn more -></a></p>
                 </div>
                     <div class="price-book-component">
-                        <h5>from $420</h5>
-                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
-                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
-                        </div>
-                    </div>
-            </div>
-            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
-                <div class="service-card-bgimg"></div>
-                <div class="service-card-text">
-                    <h4><b>Hydra Scalp Treatment</b></h4>
-                    <p><b>Medical-grade scalp cleanse and hydration protocol removing follicle-blocking buildup and delivering growth actives. </b><a href="#">Learn more -></a></p>
-                </div>
-                    <div class="price-book-component">
-                        <h5>from $180</h5>
-                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
-                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
-                        </div>
-                    </div>
-            </div>
-        </div>
-        <div class="scar-results results">
-            <div class="full-row" style="display: inline-flex;width:fit-content; gap: 10px;margin-bottom: 15px;">
-                <hr style="width: 10vw;border: none; border-top: 2px solid #655b59;">
-                <img src="../beauty-svgrepo-com.svg" width="20px" height="20px">
-                <h4><b>scarring & texture</b></h4>
-            </div>
-            <div class="full-row">Acne scars, surgical scars, and rough texture require controlled wound-healing responses. Our resurfacing treatments stimulate collagen remodelling at precise depths to smooth and regenerate skin.</div>
-            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
-                <div class="service-card-bgimg"></div>
-                <div class="service-card-text">
-                    <h4><b>Acupulse CO₂ Laser</b></h4>
-                    <p><b>Fractional ablative CO₂ laser delivering the most powerful resurfacing available for atrophic acne scars. </b><a href="#">Learn more -></a></p>
-                </div>
-                    <div class="price-book-component">
-                        <h5>from $799</h5>
-                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
-                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
-                        </div>
-                    </div>
-            </div>
-            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
-                <div class="service-card-bgimg"></div>
-                <div class="service-card-text">
-                    <h4><b>Gold RF Microneedling</b></h4>
-                    <p><b>Gold-plated tapered needles delivering RF energy into scar tissue, breaking down fibrous bands and stimulating new collagen. </b><a href="#">Learn more -></a></p>
-                </div>
-                    <div class="price-book-component">
-                        <h5>from $799</h5>
-                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
-                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
-                        </div>
-                    </div>
-            </div>
-            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
-                <div class="service-card-bgimg"></div>
-                <div class="service-card-text">
-                    <h4><b>Resurfx Non-Ablative</b></h4>
-                    <p><b>Non-ablative fractional laser stimulating collagen without surface damage, ideal for darker skin tones. </b><a href="#">Learn more -></a></p>
-                </div>
-                    <div class="price-book-component">
-                        <h5>from $580</h5>
-                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
-                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
-                        </div>
-                    </div>
-            </div>
-            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
-                <div class="service-card-bgimg"></div>
-                <div class="service-card-text">
-                    <h4><b>Picosure Laser</b></h4>
-                    <p><b>Picosecond pressure waves breaking up scar tissue and activating the skin's natural healing cascade with minimal downtime. </b><a href="#">Learn more -></a></p>
-                </div>
-                    <div class="price-book-component">
-                        <h5>from $699</h5>
-                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
-                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
-                        </div>
-                    </div>
-            </div>
-        </div>
-        <div class="body-results results">
-            <div class="full-row" style="display: inline-flex;width:fit-content; gap: 10px;margin-bottom: 15px;">
-                <hr style="width: 10vw;border: none; border-top: 2px solid #655b59;">
-                <img src="../beauty-svgrepo-com.svg" width="20px" height="20px">
-                <h4><b>body sculpting</b></h4>
-            </div>
-            <div class="full-row">Non-invasive body contouring and fat reduction treatments that reshape and tone without surgery or downtime, targeting stubborn areas that resist diet and exercise.</div>
-            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
-                <div class="service-card-bgimg"></div>
-                <div class="service-card-text">
-                    <h4><b>EmSculpt Neo</b></h4>
-                    <p><b>Combines HIFEM+ electromagnetic energy and RF in a single treatment — simultaneously building muscle and reducing fat for measurable body contouring results. </b><a href="#">Learn more -></a></p>
-                </div>
-                    <div class="price-book-component">
-                        <h5>from $850</h5>
+                        <h5>from $</h5>
                         <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
                             <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
                         </div>
@@ -911,21 +1221,26 @@
                     </div>
             </div>
         </div>
-        <div class="relax-results results">
-            <div class="full-row" style="display: inline-flex;width:fit-content; gap: 10px;margin-bottom: 15px;">
+        <div class="hair-results results">
+            <div class="full-row" style="display: inline-flex;width:fit-content; gap: 10px;margin-bottom: 15px;width: 100%;;">
+                <hr style="width: 100%;border: none; border-top: 2px solid #655b59;">
+                <img src="../beauty-svgrepo-com.svg" width="20px" height="20px">
+                <h3 style="white-space: nowrap;"><b>hair growth & removal</b></h3>
+                <hr style="width: 100%;border: none; border-top: 2px solid #655b59;">
+            </div>
+            <div class="full-row" style="display: inline-flex;width:fit-content; gap: 10px;margin-bottom: 15px;" id="hair-sub-hg">
                 <hr style="width: 10vw;border: none; border-top: 2px solid #655b59;">
                 <img src="../beauty-svgrepo-com.svg" width="20px" height="20px">
-                <h4><b>relaxation & wellness</b></h4>
+                <h4><b>hair growth</b></h4>
             </div>
-            <div class="full-row">Aromatherapy, heat, and hands-on bodywork for when you need to actually decompress. These are proper spa treatments — not add-ons — designed to complement your clinical work or stand entirely on their own.</div>
             <div class="service-card d-flex flex-column flex-lg-column align-items-center">
                 <div class="service-card-bgimg"></div>
                 <div class="service-card-text">
-                    <h4><b>Aromatic Meridian Therapy</b></h4>
-                    <p><b>A full-body aromatherapy treatment using warm therapeutic essential oils, performed along traditional pressure-point pathways to release deep muscle tension, improve circulation, and leave you genuinely unwound. </b><a href="#">Learn more -></a></p>
+                    <h4><b>PRP Scalp Restoration</b></h4>
+                    <p><b>Platelet-rich plasma from your own blood injected into the scalp to stimulate dormant follicles and promote regrowth. </b><a href="#">Learn more -></a></p>
                 </div>
                     <div class="price-book-component">
-                        <h5>from $48/hr</h5>
+                        <h5>from $680</h5>
                         <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
                             <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
                         </div>
@@ -934,11 +1249,11 @@
             <div class="service-card d-flex flex-column flex-lg-column align-items-center">
                 <div class="service-card-bgimg"></div>
                 <div class="service-card-text">
-                    <h4><b>RF Warm SPA Therapy</b></h4>
-                    <p><b>Our aromatic oil treatment elevated with gentle radiofrequency heat — the warmth penetrates deeper into muscle tissue than hands alone, melting tension while stimulating circulation and lymphatic flow. </b><a href="#">Learn more -></a></p>
+                    <h4><b>Fotona</b></h4>
+                    <p><b>Four-pass laser protocol tightening the full facial structure from inside the oral cavity outward. </b><a href="#">Learn more -></a></p>
                 </div>
                     <div class="price-book-component">
-                        <h5>from $68/30min</h5>
+                        <h5>from $899</h5>
                         <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
                             <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
                         </div>
@@ -947,175 +1262,29 @@
             <div class="service-card d-flex flex-column flex-lg-column align-items-center">
                 <div class="service-card-bgimg"></div>
                 <div class="service-card-text">
-                    <h4><b>Thai Head Therapy</b></h4>
-                    <p><b>Aromatherapy for the scalp and head using firm, rhythmic Thai pressure techniques — remarkable for tension headaches, tight shoulders, and anyone who carries stress in their neck and upper back. </b><a href="#">Learn more -></a></p>
+                    <h4><b>HydraScalp</b></h4>
+                    <p><b>placeholder </b><a href="#">Learn more -></a></p>
                 </div>
                     <div class="price-book-component">
-                        <h5>from $38/30min</h5>
+                        <h5>from $</h5>
                         <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
                             <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
                         </div>
                     </div>
             </div>
-            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
-                <div class="service-card-bgimg"></div>
-                <div class="service-card-text">
-                    <h4><b>Thai Head + Meridian Combo</b></h4>
-                    <p><b>The full hour: Thai head aromatherapy followed by a full-body aromatic oil treatment. If you only have time for one wellness treatment, this is the one. </b><a href="#">Learn more -></a></p>
-                </div>
-                    <div class="price-book-component">
-                        <h5>from $68/hr</h5>
-                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
-                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
-                        </div>
-                    </div>
-            </div>
-            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
-                <div class="service-card-bgimg"></div>
-                <div class="service-card-text">
-                    <h4><b>Ox Bone Aromatherapy</b></h4>
-                    <p><b>Facial aromatherapy performed with smooth hand-carved ox bone tools — the firm, gliding pressure drains puffiness, defines the jawline and cheekbones, and leaves the face visibly lifted. Think of it as a manual facial sculpting treatment. </b><a href="#">Learn more -></a></p>
-                </div>
-                    <div class="price-book-component">
-                        <h5>from $48</h5>
-                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
-                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
-                        </div>
-                    </div>
-            </div>
-        </div>
-        <div class="skinboost-results results">
-            <div class="full-row" style="display: inline-flex;width:fit-content; gap: 10px;margin-bottom: 15px;">
+            <div class="full-row" style="display: inline-flex;width:fit-content; gap: 10px;margin-bottom: 15px;" id="hair-sub-hr">
                 <hr style="width: 10vw;border: none; border-top: 2px solid #655b59;">
                 <img src="../beauty-svgrepo-com.svg" width="20px" height="20px">
-                <h4><b>skin boosters</b></h4>
+                <h4><b>hair removal</b></h4>
             </div>
-            <div class="full-row">Injectable and microneedling skin boosters delivering targeted actives — from PDRN and polynucleotides to exosomes and botulinum — directly into the dermis for lasting hydration, repair, and glow.</div>
             <div class="service-card d-flex flex-column flex-lg-column align-items-center">
                 <div class="service-card-bgimg"></div>
                 <div class="service-card-text">
-                    <h4><b>Exosome Skin Booster</b></h4>
-                    <p><b>Plant-derived exosomes delivering growth factors that repair the skin barrier and calm chronic inflammatory responses. </b><a href="#">Learn more -></a></p>
+                    <h4><b>Cynosure Elite Hair Removal</b></h4>
+                    <p><b>placeholder </b><a href="#">Learn more -></a></p>
                 </div>
                     <div class="price-book-component">
-                        <h5>from $580</h5>
-                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
-                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
-                        </div>
-                    </div>
-            </div>
-            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
-                <div class="service-card-bgimg"></div>
-                <div class="service-card-text">
-                    <h4><b>Aromatic Meridian Therapy</b></h4>
-                    <p><b>Full-body aromatherapy using warm therapeutic essential oils, performed along traditional pressure-point pathways to release deep muscle tension, improve circulation, and leave you genuinely unwound. </b><a href="#">Learn more -></a></p>
-                </div>
-                    <div class="price-book-component">
-                        <h5>from $48/hr</h5>
-                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
-                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
-                        </div>
-                    </div>
-            </div>
-            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
-                <div class="service-card-bgimg"></div>
-                <div class="service-card-text">
-                    <h4><b>Botox Skin Booster</b></h4>
-                    <p><b>Micro-doses of botulinum toxin injected into the dermis to reduce sebum secretion and minimise pores. </b><a href="#">Learn more -></a></p>
-                </div>
-                    <div class="price-book-component">
-                        <h5>from $499</h5>
-                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
-                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
-                        </div>
-                    </div>
-            </div>
-            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
-                <div class="service-card-bgimg"></div>
-                <div class="service-card-text">
-                    <h4><b>Rejuran Healer (Black Box)</b></h4>
-                    <p><b>Salmon-derived PDRN skin booster that repairs damaged collagen fibres and stimulates new collagen production from within. </b><a href="#">Learn more -></a></p>
-                </div>  
-                    <div class="price-book-component">
-                        <h5>from $499</h5>
-                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
-                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
-                        </div>
-                    </div>
-            </div>
-            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
-                <div class="service-card-bgimg"></div>
-                <div class="service-card-text">
-                    <h4><b>Rejuran White Porcelain</b></h4>
-                    <p><b>Polynucleotide booster combined with brightening actives to repair the skin barrier and suppress melanin. </b><a href="#">Learn more -></a></p>
-                </div>
-                    <div class="price-book-component">
-                        <h5>from $399</h5>
-                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
-                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
-                        </div>
-                    </div>
-            </div>
-            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
-                <div class="service-card-bgimg"></div>
-                <div class="service-card-text">
-                    <h4><b>Rejuran Eye Booster</b></h4>
-                    <p><b>Targeted polynucleotide booster applied to the periorbital area to support collagen renewal, soften fine lines, and address dryness around the eyes. </b><a href="#">Learn more -></a></p>
-                </div>
-                    <div class="price-book-component">
-                        <h5>from $450</h5>
-                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
-                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
-                        </div>
-                    </div>
-            </div>
-            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
-                <div class="service-card-bgimg"></div>
-                <div class="service-card-text">
-                    <h4><b>Filorga NCTF Booster</b></h4>
-                    <p><b>French polynucleotide and hyaluronic acid skin booster — deeply hydrating, locking in moisture, and restoring luminosity to sensitive or dry skin. </b><a href="#">Learn more -></a></p>
-                </div>
-                    <div class="price-book-component">
-                        <h5>from $450</h5>
-                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
-                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
-                        </div>
-                    </div>
-            </div>
-            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
-                <div class="service-card-bgimg"></div>
-                <div class="service-card-text">
-                    <h4><b>NEAUIVA Ice Booster</b></h4>
-                    <p><b>Biomimetic skin booster supporting the skin's own collagen production, smoothing fine lines, tightening pores, and restoring firmness over a course of treatments. </b><a href="#">Learn more -></a></p>
-                </div>
-                    <div class="price-book-component">
-                        <h5>from $499</h5>
-                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
-                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
-                        </div>
-                    </div>
-            </div>
-            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
-                <div class="service-card-bgimg"></div>
-                <div class="service-card-text">
-                    <h4><b>BENEV Baby Needle</b></h4>
-                    <p><b>Growth factor skin booster supporting epidermal repair and regeneration, addressing ageing markers, enlarged pores, and surface scarring. </b><a href="#">Learn more -></a></p>
-                </div>
-                    <div class="price-book-component">
-                        <h5>from $499</h5>
-                        <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
-                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
-                        </div>
-                    </div>
-            </div>
-            <div class="service-card d-flex flex-column flex-lg-column align-items-center">
-                <div class="service-card-bgimg"></div>
-                <div class="service-card-text">
-                    <h4><b>PRP Microneedling</b></h4>
-                    <p><b>Platelet-rich plasma extracted from your own blood and combined with microneedling to activate cell regeneration, stimulate collagen, and repair damaged skin. </b><a href="#">Learn more -></a></p>
-                </div>
-                    <div class="price-book-component">
-                        <h5>from $550</h5>
+                        <h5>from $</h5>
                         <div class="book-button3" style="align-self: flex-end;white-space: nowrap;">
                             <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
                         </div>
@@ -1200,6 +1369,18 @@
         </div>
     </div>
     <script>
+        const menuMap = {
+            'Facials': '.facial-results',
+            'Lifting & Tightening': '.lift-tight-results',
+            'Skin Texture & Rejuvenation': '.texture-results',
+            'Pigmentation & Dark Spots': '.pigment-results',
+            'Rosacea & Acne & Scars': '.ros-acne-results',
+            'Injections & IV': '.inj-results',
+            'Wellness & Relaxation': '.well-results',
+            'Weight Loss & Body Contouring': '.weight-results',
+            'Hair Solutions & Removal': '.hair-results',
+        };
+
         const ktownRadio = document.getElementById('flexRadioDefault1');
         const flushingRadio = document.getElementById('flexRadioDefault2');
         const ktownDiv = document.querySelector('.ktown');
@@ -1233,21 +1414,6 @@
             }
         });
 
-        const menuMap = {
-            'Facials & Skin Care': '.skincare-results',
-            'Laser Hair Removal': '.laserhair-results',
-            'Acne & Breakouts': '.acne-results',
-            'Pigmentation & Dark Spots': '.pigment-results',
-            'Fine Lines & Wrinkles': '.lines-results',
-            'Sagging & Lifting': '.sagging-results',
-            'Enlarged Pores': '.pores-results',
-            'Redness & Sensitivity': '.redness-results',
-            'Hair Loss & Thinning': '.hair-results',
-            'Scarring & Texture': '.scar-results',
-            'Body Sculpting': '.body-results',
-            'Relaxation & Wellness': '.relax-results',
-            'Skin Boosters': '.skinboost-results'
-        };
         function updateLocationDisplay() {
             if (ktownRadio.checked) {
                 ktownDiv.style.display = 'flex';
@@ -1264,9 +1430,6 @@
         const menuKeys = Object.keys(menuMap);
 
         function leftscroll() {
-            // if (scrolling) return;
-            // scrolling = true;
-            // setTimeout(() => scrolling = false, 600);
             const activeBtn = document.querySelector('.service-btn.active');
             const currentIndex = menuKeys.indexOf(activeBtn.textContent.trim());
             const prevIndex = (currentIndex - 1 + menuKeys.length) % menuKeys.length;
@@ -1276,9 +1439,6 @@
         }
 
         function rightscroll() {
-            // if (scrolling) return;
-            // scrolling = true;
-            // setTimeout(() => scrolling = false, 600);
             const activeBtn = document.querySelector('.service-btn.active');
             const currentIndex = menuKeys.indexOf(activeBtn.textContent.trim());
             const nextIndex = (currentIndex + 1) % menuKeys.length;
@@ -1286,30 +1446,53 @@
             selectService(nextBtn);
             clickMenu(nextBtn);
         }
+        function selectClickMenu(btn, jumpTo){
+            selectService(btn);
+            clickMenu(btn,jumpTo);
+        }
         function selectService(btn) {
             document.querySelectorAll('.service-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
         }
-        function clickMenu(btn) {
+        function clickMenu(btn, jumpTo) {
             document.querySelectorAll('.results').forEach(el => el.style.display = 'none');
             if (btn.classList.contains('active')) {
                 const target = menuMap[btn.textContent.trim()];
                 if (target) document.querySelector(target).style.display = 'grid';
             }
-            const el = document.getElementById('jump-to-results');
-            const offset = 0;
+            const el = jumpTo
+                ? document.getElementById(jumpTo)
+                : document.getElementById('jump-to-results');
+            const offset = 60;
             const top = el.getBoundingClientRect().top + window.scrollY - offset;
             window.scrollTo({ top });
             // setTimeout(() => {
             //     window.scrollTo({ top, behavior: 'smooth' });
             // }, 400);
         }
+
+        window.onload = function(){
+            const urlParams = new URLSearchParams(window.location.search);
+            const selectedOption = urlParams.get('servicetype');
+            const jumpTo = urlParams.get('subsec');
+            if (selectedOption) {
+                const buttonToHighlight = document.getElementById(selectedOption);
+                if(buttonToHighlight) {
+                    selectService(buttonToHighlight);
+                    clickMenu(buttonToHighlight, jumpTo);
+                }
+            }
+        }
+        
+        function gotoServices(option, subcategory){
+            window.location.href = 'index.html?servicetype=' + option + subcategory;
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('.service-btn').classList.add('active');
-            document.querySelector('.skincare-results').style.display = 'grid';
+            document.querySelector('.facial-results').style.display = 'grid';
             updateLocationDisplay();
         });
-        selectService()
     </script>
 </body>
 </html>

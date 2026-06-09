@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons-font@v13/font/simple-icons.min.css">
     <script>window.Mangomint = window.Mangomint || {}; window.Mangomint.CompanyId = 281941;</script><script src="https://booking.mangomint.com/app.js" async></script>
+    <script src="../hoverServiceDropdown.js" defer></script>
 
     <link rel="stylesheet" href="../main.css">
     <link rel="stylesheet" href="../treatments.css">
@@ -19,34 +20,69 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top custom-gradient-nav">
-    <a class="navbar-brand" href="../index.html">ICON</a>
-    <div class="book-button3 btn-primary d-lg-none ms-auto me-2">
-        <a class="nav-item nav-link" href="../booking/index.html" tabindex="-1">BOOK NOW</a>
-    </div>
-        <div class="tl-button d-lg-none">
-            <a class="nav-item nav-link" href="../zh/index.html" tabindex="-1"><img style="height: 30px;width: 30px;" src="../Circle_Flag_of_the_People's_Republic_of_China.png" alt="circle icon chinese"></a>
-        </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav ml-auto">
-        <a class="nav-item nav-link" href="../index.html">HOME <span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" href="../services/index.html">SERVICES</a>
-        <a class="nav-item nav-link" href="../packages/index.html">PACKAGES</a>
-        <a class="nav-item nav-link" href="../gallery/index.html">GALLERY</a>
-        <a class="nav-item nav-link" href="../about/index.html">ABOUT US</a>
-        <div class="book-button1">
+    <div class="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light custom-gradient-nav">
+        <a class="navbar-brand" href="../index.html">ICON</a>
+        <div class="book-button3 d-lg-none" style="align-self: flex-end;white-space: nowrap;">
             <a class="nav-item nav-link" href="../booking/index.html" tabindex="-1">BOOK NOW</a>
         </div>
-        <div class="tl-button tl-expand">
-            <a class="nav-item nav-link" href="../zh/index.html" tabindex="-1"><img style="height: 30px;width: 30px;" src="../Circle_Flag_of_the_People's_Republic_of_China.png" alt="circle icon chinese"></a>
-        </div>
+            <div class="tl-button d-lg-none">
+                <a class="nav-item nav-link" href="../zh/index.html" tabindex="-1"><img style="height: 30px;width: 30px;" src="../Circle_Flag_of_the_People's_Republic_of_China.png" alt="circle icon chinese"></a>
+            </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link active" href="../index.html">HOME <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="../services/index.html"
+                id="navbar-services">SERVICES</a>
+            <a class="nav-item nav-link" href="../packages/index.html">PACKAGES</a>
+            <a class="nav-item nav-link" href="../gallery/index.html">GALLERY</a>
+            <a class="nav-item nav-link" href="../about/index.html">ABOUT US</a>
+            <div class="book-button1">
+                <a class="nav-item nav-link" href="../booking/index.html" tabindex="-1">BOOK NOW</a>
+            </div>
+            <div class="tl-button tl-expand">
+                <a class="nav-item nav-link" href="../zh/index.html" tabindex="-1"><img style="height: 30px;width: 30px;" src="../Circle_Flag_of_the_People's_Republic_of_China.png" alt="circle icon chinese"></a>
+            </div>
 
+            </div>
+        </div>
+        </nav>
+        <div class="dropdown navbar-drop" id="service-dropdown-menu">
+            <div id="services-bridge"></div>
+            <div id="services-dropdown" class="custom-gradient-nav d-flex flex-column flex-lg-row ">
+                <a class="nav-item nav-link services-main-dropdown" href="../services/index.html">SERVICES</a>
+                <div>
+                    <a class="nav-item nav-link" href="../services/index.html?servicetype=facials">Facials</a>
+                    <a class="nav-item nav-link sub-nav-link" href="../services/index.html?servicetype=facials&subsec=facial-sub-dh">Deep Hydration</a>
+                    <a class="nav-item nav-link sub-nav-link" href="../services/index.html?servicetype=facials&subsec=facial-sub-oac">Oil & Acne Control</a>
+                    <a class="nav-item nav-link sub-nav-link" href="../services/index.html?servicetype=facials&subsec=facial-sub-aa">Anti-aging</a>
+                    <a class="nav-item nav-link sub-nav-link" href="../services/index.html?servicetype=facials&subsec=facial-sub-ssr">Sensitive Skin & Restoration</a>
+                </div>
+                <div>
+                    <a class="nav-item nav-link sub-nav-link" href="../services/index.html?servicetype=texture-rejuv&subsec=texture-sub-l">Laser Treatment</a>
+                </div>
+                <div>
+                    <a class="nav-item nav-link" href="../services/index.html?servicetype=inj-iv">Injections & IV</a>
+                    <a class="nav-item nav-link sub-nav-link" href="../services/index.html?servicetype=inj-iv&subsec=inj-sub-in">Injections</a>
+                    <a class="nav-item nav-link sub-nav-link" href="../services/index.html?servicetype=inj-iv&subsec=inj-sub-iv">IV</a>
+                </div>
+                <div>
+                    <a class="nav-item nav-link" href="../services/index.html?servicetype=well-relax">Wellness & Relaxation</a>
+                    <a class="nav-item nav-link sub-nav-link" href="../services/index.html?servicetype=well-relax&subsec=well-sub-at">Aromatherapy</a>
+                    <a class="nav-item nav-link sub-nav-link" href="../services/index.html?servicetype=well-relax&subsec=well-sub-ht">Head Therapy</a>
+                </div>
+                <div>
+                    <a class="nav-item nav-link" href="../services/index.html?servicetype=hair">Hair Growth & Removal</a>
+                    <a class="nav-item nav-link sub-nav-link" href="../services/index.html?servicetype=hair&subsec=hair-sub-hg">Hair Growth</a>
+                    <a class="nav-item nav-link sub-nav-link" href="../services/index.html?servicetype=hair&subsec=hair-sub-hr">Hair Removal</a>
+                </div>
+            </div>
+            
         </div>
     </div>
-    </nav>
 
     <div class="title-banner" style="height: 40vh !important;">
         <div class="title-bannergraphics">
@@ -602,7 +638,6 @@
             document.querySelector('.all-packages').style.display = 'grid';
             updateLocationDisplay();
         });
-        selectService()
     </script>
 </body>
 </html>

@@ -22,9 +22,7 @@ html {
     gap: 2vw;
     align-items: center;
     font-family: 'Cormorant Garamond', serif;
-}
-.navbar{
-    /* position: fixed; */
+    z-index: 100;
 }
 .nav-item{
     font-size: 16px;
@@ -41,6 +39,39 @@ html {
     border-radius: 50%;
     padding: 0px 0px !important;
 }
+
+.navbar-drop{
+    width: 100%;
+    position: absolute;
+    border-radius: 0px;
+    z-index: 2;
+    border: none;
+    padding: 0px 0px;
+}
+
+.services-main-dropdown{
+    flex-basis: 100%;
+    width: 100%;
+    text-align: center;
+}
+#services-bridge{
+    cursor: pointer;
+    /* border: 1px solid red; */
+}
+#services-dropdown{
+    background-color: #d5d1ccA0;
+    flex-wrap: wrap;
+    gap: 1%;
+    justify-content: space-between;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all .2s ease;
+}
+#services-dropdown a:hover{
+    text-decoration: underline;
+}
+.sub-nav-link{font-weight: 500 !important;}
+
 .book-button1,
 .book-button2,
 .book-button3{
@@ -102,6 +133,7 @@ html {
 .navbar-collapse .book-button1 .nav-link {
     display: inline-block;
 }
+
 .title-banner{
     background-image: url('title-banner0.png');
     background-size: cover;
@@ -112,14 +144,8 @@ html {
     position: relative;
     z-index: 0;
 }
-.white{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top right, rgba(255,255,255,0) 65%, rgba(255,255,255,1) 100%);
-    z-index: 1;
+.title-banner.home{
+    min-height: 650px;
 }
 .title-bannergraphics{
     position: relative;    
@@ -143,6 +169,38 @@ html {
     right: 10vw;
     z-index: 2;
 }
+.trending{
+    position: absolute;
+    padding: 0vh 15%;
+    top: 25%;
+    margin: 0 auto;
+    z-index: 1000;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.trending-card-text a,
+.trending-card-text a:active,
+.trending-card-text a:hover{
+    color: #281822;
+}
+.trending-card{
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.trending-card:hover{
+    transform: scale(1.03); 
+}
+.trending-card-bgimg{
+    background-image: url(pexels-hoang-b-u-2062876836-30215485.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 200px;
+}
 .title-row{
     display: inline-flex;
     align-items: baseline;
@@ -155,10 +213,39 @@ html {
 }
 
 .experience{
-    background-color: #281822;
-    padding: 10vh 15%;
+    background-color: #655b59;
+    padding: 5vh 15%;
     color: #d5d1cc;
 }
+
+.services-grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #281822;
+    padding: 10vh 15%;
+    gap: 10px;
+    color: #d5d1cc;
+}
+.service-btn-icon{
+    width: 25px;
+    height: 25px;
+}
+.services-btn{
+    border: none;
+    background-color: #4a382d80;
+    color: #d5d1cc;
+    border-radius: 40px;
+    height: 100%;
+    width: 100%;
+    padding: 10px 15px;
+}
+.services-btn p{margin: 0;}
+.services-btn:hover{
+    background-color: #4a382d;
+    transform: scale(1.03); 
+    /* transition: ease; */
+}
+
 .reviews-carousel{
     padding-top: 15vh;
     padding-left: 15%;padding-right: 15%;
@@ -293,7 +380,6 @@ html {
 .si-wechat    { color: #07C160; }
 .si-xiaohongshu { color: #FF2442; } */
 .deals, 
-.trending, 
 .team,
 .locations-info{
     padding: 0px 15%;
@@ -303,9 +389,6 @@ padding-top: 0px;}
 .consultation {
     position: relative;
     padding: 5% 15%;
-}
-.service-card-skin-booster-combo{
-    margin-top: -20px;
 }
 .booster-combo{
     padding-left: 5px;
@@ -333,25 +416,6 @@ padding-top: 0px;}
     border-radius: 8px;
 }
 .consult-text h3{color:#281822}
-.trending{
-    padding-top: 15vh;
-    margin: 0 auto;
-}
-.trending-card{
-    gap: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-.trending-card-bgimg{
-    background-image: url(pexels-hoang-b-u-2062876836-30215485.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 30vh;
-}
 .deals{
     padding-top: 15vh;
 }
@@ -557,7 +621,7 @@ ul li::before{
         grid-template-columns: repeat(8, 1fr)  !important;
     }
     .results{
-        grid-template-columns: auto auto !important;
+        grid-template-columns: repeat(2, 1fr) !important;
     }
 }
 @media (max-width: 1200px) {
@@ -579,7 +643,7 @@ ul li::before{
         grid-template-columns: repeat(4, 1fr)  !important;
     }
     .results{
-        grid-template-columns: auto !important;
+        grid-template-columns: 1fr !important;
     }
 }
 @media (max-width: 992px) {
@@ -598,14 +662,23 @@ ul li::before{
     }
     /* .deals{padding-left: 20px;
             padding-right: 20px;} */
-    .trending,
     .deals-card,
     .loc-text,
     .location-select{
-        max-width: 80vw;
+        max-width: 70vw;
+    }
+    .title-banner.home{
+        min-height: 650px;
+    }
+    .trending{
+        margin: 0 auto;
+        top: 30%;
+    }
+    .services-grid{
+        padding-left: 10vw;
+        padding-right: 10vw;
     }
     .location-select{margin: 0 auto;}
-    .trending, 
     .team,
     .experience,
     .reviews-carousel,
@@ -644,12 +717,6 @@ ul li::before{
     .location-select{
         gap: 2vw;
     }
-    .white{
-        background: linear-gradient(30deg, rgba(255,255,255,0) 30%, rgba(255,255,255,1) 100%);
-    }
-    .title-banner{
-        height: 90vh;
-    }
     .banner-title{
         text-align: center;
         right: 50%;
@@ -667,7 +734,10 @@ ul li::before{
         text-align: center;
         justify-content: center;
         align-items: center;
-        max-width: 70vw;
+        width: 100%;
+    }
+    .trending-card-bgimg{
+        height: 10vh;
     }
     ul{
         align-self: center;
@@ -701,6 +771,14 @@ ul li::before{
         border-radius: 4px;
     }
     #per-session{display: none;}
+    .services-grid{
+        grid-template-columns: auto auto;
+    }
+    .services-grid > :last-of-type{
+        grid-column: span 2;
+        justify-self: center;
+        width: 50%;
+    }
 }
 
 .page-title{

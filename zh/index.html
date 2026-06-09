@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons-font@v13/font/simple-icons.min.css">
     <script>window.Mangomint = window.Mangomint || {}; window.Mangomint.CompanyId = 281941;</script><script src="https://booking.mangomint.com/app.js" async></script>
+    <script src="../hoverServiceDropdown.js" defer></script>
 
     <link rel="stylesheet" href="../main.css">
     <title>Serica - Skincare and Medspa</title>
@@ -18,41 +19,78 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top custom-gradient-nav">
-    <a class="navbar-brand" href="#">ICON</a>
-    <div class="book-button3 d-lg-none" style="align-self: flex-end;white-space: nowrap;">
-        <a class="nav-item nav-link" href="booking/index.html" tabindex="-1">BOOK NOW</a>
-    </div>
-        <div class="tl-button d-lg-none">
-            <a class="nav-item nav-link" href="../index.html" tabindex="-1"><img style="height: 30px;width: 30px;" src="United-states_flag_icon_round.svg" alt="circle icon chinese"></a>
+    
+    <div class="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light custom-gradient-nav">
+        <a class="navbar-brand" href="../index.html">ICON</a>
+        <div class="book-button3 d-lg-none" style="align-self: flex-end;white-space: nowrap;">
+            <a class="nav-item nav-link" href="../booking/index.html" tabindex="-1">BOOK NOW</a>
         </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav ml-auto">
-        <a class="nav-item nav-link active" href="index.html">主页<span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" href="services/index.html">服务项目</a>
-        <a class="nav-item nav-link" href="packages/index.html">服务套餐</a>
-        <a class="nav-item nav-link" href="gallery/index.html">长廊</a>
-        <a class="nav-item nav-link" href="about/index.html">关于我们</a>
-        <div class="book-button1">
-            <a class="nav-item nav-link" href="booking/index.html" tabindex="-1">预约</a>
-        </div>
-        <div class="tl-button tl-expand">
-            <a class="nav-item nav-link" href="../index.html" tabindex="-1"><img style="height: 30px;width: 30px;" src="United-states_flag_icon_round.svg" alt="circle icon chinese"></a>
-        </div>
+            <div class="tl-button d-lg-none">
+                <a class="nav-item nav-link" href="../zh/index.html" tabindex="-1"><img style="height: 30px;width: 30px;" src="United-states_flag_icon_round.svg" alt="circle icon us"></a>
+            </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link active" href="../index.html">HOME <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="../services/index.html"
+                id="navbar-services">SERVICES</a>
+            <a class="nav-item nav-link" href="../packages/index.html">PACKAGES</a>
+            <a class="nav-item nav-link" href="../gallery/index.html">GALLERY</a>
+            <a class="nav-item nav-link" href="../about/index.html">ABOUT US</a>
+            <div class="book-button1">
+                <a class="nav-item nav-link" href="../booking/index.html" tabindex="-1">BOOK NOW</a>
+            </div>
+            <div class="tl-button tl-expand">
+                <a class="nav-item nav-link" href="../zh/index.html" tabindex="-1"><img style="height: 30px;width: 30px;" src="United-states_flag_icon_round.svg" alt="circle icon us"></a>
+            </div>
 
+            </div>
+        </div>
+        </nav>
+        <div class="dropdown navbar-drop" id="service-dropdown-menu">
+            <div id="services-bridge"></div>
+            <div id="services-dropdown" class="custom-gradient-nav d-flex flex-column flex-lg-row ">
+                <a class="nav-item nav-link services-main-dropdown" href="../services/index.html">SERVICES</a>
+                <div>
+                    <a class="nav-item nav-link" href="../services/index.html?servicetype=facials">Facials</a>
+                    <a class="nav-item nav-link sub-nav-link" href="../services/index.html?servicetype=facials&subsec=facial-sub-dh">Deep Hydration</a>
+                    <a class="nav-item nav-link sub-nav-link" href="../services/index.html?servicetype=facials&subsec=facial-sub-oac">Oil & Acne Control</a>
+                    <a class="nav-item nav-link sub-nav-link" href="../services/index.html?servicetype=facials&subsec=facial-sub-aa">Anti-aging</a>
+                    <a class="nav-item nav-link sub-nav-link" href="../services/index.html?servicetype=facials&subsec=facial-sub-ssr">Sensitive Skin & Restoration</a>
+                </div>
+                <div>
+                    <a class="nav-item nav-link sub-nav-link" href="../services/index.html?servicetype=texture-rejuv&subsec=texture-sub-l">Laser Treatment</a>
+                </div>
+                <div>
+                    <a class="nav-item nav-link" href="../services/index.html?servicetype=inj-iv">Injections & IV</a>
+                    <a class="nav-item nav-link sub-nav-link" href="../services/index.html?servicetype=inj-iv&subsec=inj-sub-in">Injections</a>
+                    <a class="nav-item nav-link sub-nav-link" href="../services/index.html?servicetype=inj-iv&subsec=inj-sub-iv">IV</a>
+                </div>
+                <div>
+                    <a class="nav-item nav-link" href="../services/index.html?servicetype=well-relax">Wellness & Relaxation</a>
+                    <a class="nav-item nav-link sub-nav-link" href="../services/index.html?servicetype=well-relax&subsec=well-sub-at">Aromatherapy</a>
+                    <a class="nav-item nav-link sub-nav-link" href="../services/index.html?servicetype=well-relax&subsec=well-sub-ht">Head Therapy</a>
+                </div>
+                <div>
+                    <a class="nav-item nav-link" href="../services/index.html?servicetype=hair">Hair Growth & Removal</a>
+                    <a class="nav-item nav-link sub-nav-link" href="../services/index.html?servicetype=hair&subsec=hair-sub-hg">Hair Growth</a>
+                    <a class="nav-item nav-link sub-nav-link" href="../services/index.html?servicetype=hair&subsec=hair-sub-hr">Hair Removal</a>
+                </div>
+            </div>
+            
         </div>
     </div>
-    </nav>
-    <div class="title-banner">
+
+    <div class="title-banner home">
         <div class="title-bannergraphics">
             <div class="banner-title">
                 <div class="title-row">
                     <h1><i>Serica</i></h1><h3>医疗沙龙</h3>
                 </div>
-                <h4>肤 若 丝 滑</h4>
+                <h4><i>肤 若 丝 滑</i></h4>
             </div>
 
             <svg class="banner-graphic" viewBox="0 0 800 588" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -66,126 +104,79 @@
             <rect width="559.335" height="570.619" transform="matrix(0.707107 -0.707107 0.708862 0.705347 0 791.499)" fill="#d7deeb " fill-opacity="0.8"/>
             </g>
             </svg>
+            
+            <div class="trending">
+                <div style="display: inline-flex;align-items: center;gap: 10px;margin-bottom: 15px;">
+                    <hr style="width: 10vw;border: none; border-top: 2px solid #655b59;">
+                    <img src="../beauty-svgrepo-com.svg" width="20px" height="20px">
+                    <h4><b>trending now</b></h4>
+                    <p style="background-color: #4a382d;padding: 1px 6px; color:#d1cdc6;font-size: 8px;margin-left: 10px;"><b>NEW</b></p>
+                </div>
+                    <div class="trending-card trending-xerf d-flex flex-column flex-lg-row align-items-center">
+                        <div class="trending-card-bgimg"></div>
+                        <div class="trending-card-text">
+                            <h3 style="color: #655b59;font-weight: bold;">XERF RF Lifting</h3>
+                            <p>Extended RF Technology · FDA Cleared</p>
+                                    <p><b>Next-generation extended RF technology delivering continuous thermal energy to the deep dermis for superior tightening.</b> <a href="services/xerf.html">Learn more -></a></p>
+                            <div style="display: inline-flex;align-items: baseline;padding-top: 10px;">
+                                <h3>$1,500</h3>
+                                <p id="per-session" style="white-space: nowrap;margin-left: 5px;">per session</p>
+                                <div class="book-button2" style="align-self: flex-end;white-space: nowrap;margin-left: 5vw;">
+                                    <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
         </div>
         <div class="white"></div>
     </div>
-
-    <div class="experience d-flex flex-column flex-sm-row align-items-center">
-        <div style="width: 100%;text-align: center;">
-            <h3>FDA</h3>
-            <p>approved devices</p>
-        </div>
-        <div style="width: 100%;text-align: center;">
-            <h3>50+</h3>
-            <p>treatments offered</p>
-        </div>
-        <div style="width: 100%;text-align: center;">
-            <h3>800+</h3>
-            <p>clients served</p>
-        </div>
-    </div>
     
-    <div id="overlay" class="overlay-container">
-        <div class="overlay-box" style="display:flex; flex-direction: column; justify-content:center; align-items:center;background:#f5f5f3;">
-        <button id="closeOverlay" class="close-btn">&times;</button>
-        <iframe
-            src="https://booking.mangomint.com/281941"
-            style="width:450px; max-width:100%; min-height:80vh; border:none; border-radius:16px; box-shadow:0 2px 24px rgba(0,0,0,0.10); background:#fff;"
-            scrolling="yes"
-            title="Book an appointment"
-        ></iframe>
-        </div>
-    </div>
-
-    <div class="body-content">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="false" data-interval="false">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="carousel-card d-flex flex-column flex-lg-row align-items-center">
-                    <div class="carousel-img">
-                        <img class="d-block " src="../pexels-eberhardgross-1612432.jpg" alt="...">
-                    </div>
-                    <div class="carousel-capt">
-                        <h4><i>clinical precision</i></h4>
-                        <p><b>Every device we use is FDA-cleared and every claim on our menu is verified against manufacturer data. We operate under physician supervision. Your safety is not a disclaimer. It's the foundation of everything we do.</b></p>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="carousel-card d-flex flex-column flex-lg-row align-items-center">
-                    <div class="carousel-img">
-                        <img class="d-block" src="../pexels-annpeach-14095427.jpg" alt="...">
-                    </div>
-                    <div class="carousel-capt">
-                        <h4><i>personal connection</i></h4>
-                        <p><b>Every plan is built around a specific person and every follow-up measures real progress. Each client receives personalized treatment recommendations based on precise data.</b></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        </ol>
-        </div>
-    </div>
-
-    <div class="consultation">
-        <div class="consult-text">
-            <h5><b>not sure where to start?</b></h5>
-            <h3>your skin has a story.
-                VISIA reads it.</h3>
-            <h6><b>Our advanced VISIA Complexion Analysis System photographs and maps your skin across multiple lighting modes — revealing spots, texture, pores, UV damage, and subsurface concerns invisible to the naked eye. <br> Every Serica journey begins here, with clarity.</b></h6>
-                
-            <div class="book-button2" style="align-self: flex-end;white-space: nowrap;">
-                <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="trending">
-        <div style="display: inline-flex;align-items: center;gap: 10px;margin-bottom: 15px;">
-            <hr style="width: 10vw;border: none; border-top: 2px solid #655b59;">
-            <img src="../beauty-svgrepo-com.svg" width="20px" height="20px">
-            <h4><b>trending now</b></h4>
-            <p style="background-color: #655b59;padding: 1px 6px; color:#d1cdc6;font-size: 8px;margin-left: 10px;"><b>NEW</b></p>
-        </div>
-            <div class="trending-card trending-xerf d-flex flex-column flex-lg-row align-items-center">
-                <div class="trending-card-bgimg"></div>
-                <div class="trending-card-text">
-                    <h3 style="color: #655b59;font-weight: bold;">XERF RF Lifting</h3>
-                    <p>Extended RF Technology · FDA Cleared</p>
-                    <p style="font-weight: bold;">The world's first dual-frequency monopolar RF system — FDA-cleared for non-invasive structural skin tightening. Delivers energy at two frequencies simultaneously, reaching from the upper dermis down to the SMAS layer for lifting and contouring with zero downtime.</p>
-                    <ul id="team-text-list" style="font-weight: bold;">
-                        <li><p>Non-invasive lifting for face, neck, and jawline</p></li>
-                        <li><p>Stimulates collagen and elastin remodelling</p></li>
-                        <li><p>Results peak at 3 months and last 9–12 months</p></li>
-                    </ul>
-                    <div style="display: inline-flex;align-items: baseline;padding-top: 10px;">
-                        <h3>$1,500</h3>
-                        <p id="per-session" style="white-space: nowrap;margin-left: 5px;">per session</p>
-                        <div class="book-button2" style="align-self: flex-end;white-space: nowrap;margin-left: 5vw;">
-                            <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="services-grid">
+        <button class="services-btn" onclick="gotoServices('facials')">
+            <img class="service-btn-icon" src="beauty-svgrepo-com-d5d1cc.svg">
+            <p>Facials</p>
+        </button>
+        <button class="services-btn" onclick="gotoServices('lift-tight')">
+            <img class="service-btn-icon" src="beauty-svgrepo-com-d5d1cc.svg">
+            <p>Lifting & Tightening</p>
+        </button>
+        <button class="services-btn" onclick="gotoServices('texture-rejuv')">
+            <img class="service-btn-icon" src="beauty-svgrepo-com-d5d1cc.svg">
+            <p>Skin Texture & Rejuvenation</p>
+        </button>
+        <button class="services-btn" onclick="gotoServices('pigment-dark')">
+            <img class="service-btn-icon" src="beauty-svgrepo-com-d5d1cc.svg">
+            <p>Pigmentation & Dark Spots</p>
+        </button>
+        <button class="services-btn" onclick="gotoServices('ros-acne-scar')">
+            <img class="service-btn-icon" src="beauty-svgrepo-com-d5d1cc.svg">
+            <p>Rosacea & Acne & Scars</p>
+        </button>
+        <button class="services-btn" onclick="gotoServices('inj-iv')">
+            <img class="service-btn-icon" src="beauty-svgrepo-com-d5d1cc.svg">
+            <p>Injections & IV</p>
+        </button>
+        <button class="services-btn" onclick="gotoServices('well-relax')">
+            <img class="service-btn-icon" src="beauty-svgrepo-com-d5d1cc.svg">
+            <p>Wellness & Relaxation</p>
+        </button>
+        <button class="services-btn" onclick="gotoServices('weight-body')">
+            <img class="service-btn-icon" src="beauty-svgrepo-com-d5d1cc.svg">
+            <p>Weight Loss & Body Contouring</p>
+        </button>
+        <button class="services-btn" onclick="gotoServices('hair')">
+            <img class="service-btn-icon" src="beauty-svgrepo-com-d5d1cc.svg">
+            <p>Hair Solutions & Removal</p>
+        </button>
     </div>
 
     <div class="deals">
         <div style="display: inline-flex;align-items: center;gap: 10px;margin-bottom: 15px;">
             <hr style="width: 10vw;border: none; border-top: 2px solid #655b59;">
-            <img src="../beauty-svgrepo-com.svg" width="20px" height="20px">
+            <img src="beauty-svgrepo-com.svg" width="20px" height="20px">
             <h4><b>offers for june 2026</b></h4>
-            <p style="background-color: #655b59;padding: 1px 6px; color:#d1cdc6;font-size: 8px;margin-left: 10px;"><b>NEW</b></p>
+            <p style="background-color: #4a382d;padding: 1px 6px; color:#d1cdc6;font-size: 8px;margin-left: 10px;"><b>NEW</b></p>
         </div>
         <div class="deals-cards">
             
@@ -245,12 +236,78 @@
             </div>
         </div>
     </div>
+    
+    <div id="overlay" class="overlay-container">
+        <div class="overlay-box" style="display:flex; flex-direction: column; justify-content:center; align-items:center;background:#f5f5f3;">
+        <button id="closeOverlay" class="close-btn">&times;</button>
+        <iframe
+            src="https://booking.mangomint.com/281941"
+            style="width:450px; max-width:100%; min-height:80vh; border:none; border-radius:16px; box-shadow:0 2px 24px rgba(0,0,0,0.10); background:#fff;"
+            scrolling="yes"
+            title="Book an appointment"
+        ></iframe>
+        </div>
+    </div>
+
+    <div class="body-content">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="false" data-interval="false">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="carousel-card d-flex flex-column flex-lg-row align-items-center">
+                    <div class="carousel-img">
+                        <img class="d-block " src="pexels-annpeach-14095427.jpg" alt="...">
+                    </div>
+                    <div class="carousel-capt">
+                        <h4><i>clinical precision</i></h4>
+                        <p><b>Every device we use is FDA-cleared and every claim on our menu is verified against manufacturer data. We operate under physician supervision. Your safety is not a disclaimer. It's the foundation of everything we do.</b></p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-card d-flex flex-column flex-lg-row align-items-center">
+                    <div class="carousel-img">
+                        <img class="d-block" src="pexels-annpeach-14095427.jpg" alt="...">
+                    </div>
+                    <div class="carousel-capt">
+                        <h4><i>personal connection</i></h4>
+                        <p><b>Every plan is built around a specific person and every follow-up measures real progress. Each client receives personalized treatment recommendations based on precise data.</b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        </ol>
+        </div>
+    </div>
+
+    <div class="consultation">
+        <div class="consult-text">
+            <h5><b>not sure where to start?</b></h5>
+            <h3>your skin has a story.
+                VISIA reads it.</h3>
+            <h6><b>Our advanced VISIA Complexion Analysis System photographs and maps your skin across multiple lighting modes — revealing spots, texture, pores, UV damage, and subsurface concerns invisible to the naked eye. <br> Every Serica journey begins here, with clarity.</b></h6>
+                
+            <div class="book-button2" style="align-self: flex-end;white-space: nowrap;">
+                <a class="nav-item nav-link booking-overlay" href="javascript:void(0)" tabindex="-1">BOOK NOW</a>
+            </div>
+        </div>
+    </div>
 
     <div class="team">
         <h4>OUR TEAM</h4>
         <h3><b>serica's team of qualified medical professionals are here to help you</b></h3>
         <div class="team-card flex-column flex-lg-row align-items-center" style="margin: 20px 0px;">
-            <img src="../med-dir.jpg" alt="placeholder-dr">
+            <img src="med-dir.jpg" alt="placeholder-dr">
             <div class="team-text">
                 <h3><b>Dr. John Ventrudo, MD</b></h3>
                 <h5>Medical Director · Serica Skincare & MedSpa</h5>
@@ -272,7 +329,7 @@
     <div class="reviews-carousel">
         <div style="display: inline-flex;align-items: center;gap: 10px;margin-bottom: 15px;">
             <hr style="width: 10vw;border: none; border-top: 2px solid #655b59;">
-            <img src="../beauty-svgrepo-com.svg" width="20px" height="20px">
+            <img src="beauty-svgrepo-com.svg" width="20px" height="20px">
             <h4><b>client experiences</b></h4>
             <p style="margin: auto;"><b><a href="#">See more -></a></b></p>
         </div>
@@ -315,30 +372,45 @@
             </div>
         </div>
         <div class="ktown loc flex-column flex-lg-row align-items-center">
-            <img class="loc-img ktown-img" src="../rpy90iolcoytvcm3u9lh.jpg" alt="serica spa">
+            <img class="loc-img ktown-img" src="rpy90iolcoytvcm3u9lh.jpg" alt="serica spa">
             <div class="loc-text">
                 <p style="color: #655b59;">In the heart of Koreatown on 32nd Street, a private 14th floor studio designed around the full clinical Serica experience. </p>
                 39 W 32nd St, 14th Floor, New York, NY 10001<br>
                 Mon–Fri 10am–7pm <br>
                 Sat–Sun 10am–6:30pm <br>
-                <img src="../call-191.svg" height="15px" width="15px">
+                <img src="call-191.svg" height="15px" width="15px">
                   (212) 226-6357</p>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.6304668787907!2d-73.98731099999999!3d40.748156099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a8fd2935f5%3A0x48e9f725e85a31e6!2s39%20W%2032nd%20St%2014th%20Floor%2C%20New%20York%2C%20NY%2010001!5e0!3m2!1sen!2sus!4v1780293702416!5m2!1sen!2sus" width="100%" height="45%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             
         </div>
         <div class="flushing loc  flex-column flex-lg-row align-items-center">
-            <img class="loc-img flushing-img" src="../rpy90iolcoytvcm3u9lh.jpg" alt="serica spa">
+            <img class="loc-img flushing-img" src="rpy90iolcoytvcm3u9lh.jpg" alt="serica spa">
             <div class="loc-text">
                 <p style="color: #655b59;">Where Serica began. Rooted in downtown Flushing's Chinese and Korean communities, with the full treatment menu across both floors. </p>
                 136-18 39th Ave, 11th Floor, Flushing, NY 11354<br>
                 Mon–Fri 10am–7pm <br>
                 Sat–Sun 10am–6:30pm <br>
-                <img src="../call-191.svg" height="15px" width="15px">
+                <img src="call-191.svg" height="15px" width="15px">
                   (212) 226-6357</p>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.080369248792!2d-73.83202792449909!3d40.76025703466083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c26011d243bec9%3A0xc32a21ca50b2a04b!2s136-18%2039th%20Ave%2011th%20Floor%2C%20Flushing%2C%20NY%2011354!5e0!3m2!1sen!2sus!4v1780293745564!5m2!1sen!2sus" width="100%" height="45%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             
+        </div>
+    </div>
+    
+    <div class="experience d-flex flex-column flex-sm-row align-items-center">
+        <div style="width: 100%;text-align: center;">
+            <h3>FDA</h3>
+            <p>approved devices</p>
+        </div>
+        <div style="width: 100%;text-align: center;">
+            <h3>50+</h3>
+            <p>treatments offered</p>
+        </div>
+        <div style="width: 100%;text-align: center;">
+            <h3>800+</h3>
+            <p>clients served</p>
         </div>
     </div>
 
@@ -352,13 +424,13 @@
     </div>
     <div class="footer">
         <div class="footer-icon">
-            <a class="navbar-brand" href="#">ICON</a>
+            <a class="navbar-brand" href="../index.html">ICON</a>
             <p>© 2026 Serica Skincare & MedSpa. <br>All Rights Reserved.</p>
         </div>
         <div class="footer-links">
-            <a class="footer-link" href="../services/index.html">services </a>
-            <a class="footer-link" href="../gallery/index.html">gallery </a>
-            <a class="footer-link" href="../about/index.html">about us </a>
+            <a class="footer-link" href="services/index.html">services </a>
+            <a class="footer-link" href="gallery/index.html">gallery </a>
+            <a class="footer-link" href="about/index.html">about us </a>
             <a class="footer-link" href="#">contact us </a>
         </div>
     </div>
@@ -398,6 +470,10 @@
         const ktownDiv = document.querySelector('.ktown');
         const flushingDiv = document.querySelector('.flushing');
         
+        function gotoServices(option){
+            window.location.href = 'services/index.html?servicetype=' + option;
+        }
+
         function updateLocationDisplay() {
             if (ktownRadio.checked) {
                 ktownDiv.style.display = 'flex';
