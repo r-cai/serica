@@ -17,7 +17,7 @@
     border: 2px solid #4a382d;
     cursor: pointer;
     transition: all 0.3s ease;
-    white-space: nowrap;
+    /* white-space: nowrap; */
     width: 100%;
 }
 .service-btn {
