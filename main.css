@@ -49,6 +49,9 @@ html {
     padding: 0px 0px;
 }
 
+.full-row {
+    grid-column: 1 / -1; 
+}
 .services-main-dropdown{
     flex-basis: 100%;
     width: 100%;
@@ -60,10 +63,13 @@ html {
 }
 #services-dropdown{
     background-color: #d5d1ccA0;
+    /* display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: row; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 1%;
-    justify-content: space-evenly;
+    justify-content: space-around;
     max-height: 0px;
     overflow: hidden;
     transition: all .2s ease;
@@ -144,6 +150,7 @@ html {
     padding-top: 65px;
     position: relative;
     z-index: 0;
+    min-height: 240px;
 }
 .title-banner.home{
     min-height: 650px;
@@ -610,6 +617,9 @@ ul li::before{
 
 @media (max-width: 590px) {
     hr{display: none;}
+    /* #services-dropdown{
+        grid-template-columns: repeat(3, 1fr) !important;
+    } */
 }
 @media (max-width:1000px) {
     .deals-cards{
@@ -631,6 +641,9 @@ ul li::before{
     }
 }
 @media (max-width: 600px) {
+    #services-dropdown{
+        grid-template-columns: repeat(2, 1fr);
+    }
     .deals-cards{
         display: grid;
         grid-template-columns: auto;

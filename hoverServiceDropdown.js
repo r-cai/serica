@@ -52,6 +52,12 @@ serviceDropdown.addEventListener('click', (e) => {
             const displayHeight = navOpen.bottom-btnRect.bottom;
             console.log(displayHeight);
             serviceDropdownMenu.style.setProperty('margin-top', '-' + displayHeight + 'px', 'important');
+            window.addEventListener('resize', function handleResize(){
+                serviceDropdownMenu.style['border'] = 'none';
+                serviceDropdownMenu.style['max-height'] = '0px';
+                document.getElementById('services-bridge').style['height'] = '0px';
+                serviceDropdownMenu.style['padding'] = '0px 10px';
+            }, {once: true});
 
         }
         else if(isOpen){

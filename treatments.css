@@ -216,9 +216,6 @@
 .credit-top-up{
     text-align: center !important;
 }
-.full-row {
-    grid-column: 1 / -1; 
-}
 .arrowp{
     width: fit-content;
     padding: 15px;
