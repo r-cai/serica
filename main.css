@@ -52,6 +52,9 @@ html {
 .full-row {
     grid-column: 1 / -1; 
 }
+.full-row h3{
+    white-space: nowrap;
+}
 .services-main-dropdown{
     flex-basis: 100%;
     width: 100%;
@@ -67,7 +70,7 @@ html {
     flex-wrap: wrap;
     flex-direction: row; */
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 1%;
     justify-content: space-around;
     max-height: 0px;
@@ -617,6 +620,9 @@ ul li::before{
 
 @media (max-width: 590px) {
     hr{display: none;}
+    .full-row h3{
+        white-space: wrap;
+    }
     /* #services-dropdown{
         grid-template-columns: repeat(3, 1fr) !important;
     } */
